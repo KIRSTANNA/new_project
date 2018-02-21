@@ -79,7 +79,7 @@ public class Sample5 {
 
     @Test
     public void popUpEnterNumber() throws Exception {
-        String enterKeys = "5";
+        String enterKeys = "3";
         driver.findElement(By.className("w3-khaki")).click();
         Alert alert = driver.switchTo().alert();
         assertEquals("Please enter a number", alert.getText());
