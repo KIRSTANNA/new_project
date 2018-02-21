@@ -16,7 +16,7 @@ public class Sample1Task {
 
         // TODO
         // go to https://kristinek.github.io/test-sample/index2.html
-        // get title of page
+        // get title of pageyuhuyhguyhgiuy
         // get URL of current page
 
         //Close browser
