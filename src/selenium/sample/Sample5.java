@@ -38,20 +38,20 @@ public class Sample5 {
         driver.get("https://kristinek.github.io/test-sample/examples/al_p");
 //        org.openqa.selenium.UnhandledAlertException: unexpected alert open:
 //        driver.findElement(By.id("heading")).getText();
-        Alert alert = driver.switchTo().alert();
-        assertEquals("Booooooooo!", alert.getText());
+        Alert alert1 = driver.switchTo().alert();
+        assertEquals("Booooooooo!", alert1.getText());
 
-        alert.accept();
+        alert1.accept();
         assertEquals("This page is alerted", driver.findElement(By.id("heading")).getText());
     }
 
     @Test
     public void alertOnclickingButton() throws Exception {
         driver.findElement(By.className("w3-red")).click();
-        Alert alert = driver.switchTo().alert();
-        assertEquals("I am an alert box!", alert.getText());
+        Alert alert2 = driver.switchTo().alert();
+        assertEquals("I am an alert box!", alert2.getText());
 
-        alert.accept();
+        alert2.accept();
         assertEquals("", driver.findElement(By.id("textForAlerts")).getText());
     }
 
@@ -81,11 +81,11 @@ public class Sample5 {
     public void popUpEnterNumber() throws Exception {
         String enterKeys = "5";
         driver.findElement(By.className("w3-khaki")).click();
-        Alert alert = driver.switchTo().alert();
-        assertEquals("Please enter a number", alert.getText());
+        Alert alert4 = driver.switchTo().alert();
+        assertEquals("Please enter a number", alert4.getText());
 
-        alert.sendKeys(enterKeys);
-        alert.accept();
+        alert4.sendKeys(enterKeys);
+        alert4.accept();
         assertTrue(driver.findElement(By.id("textForAlerts")).getText().contains("instead of " + enterKeys));
     }
 }
