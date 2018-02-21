@@ -9,12 +9,12 @@ import org.openqa.selenium.support.PageFactory;
 //import pages.FormPage;
 //import pages.ListPage;
 
-public class Task4 {
+public class Task4Bonus {
     static WebDriver driver;
 //	FormPage formPage = PageFactory.initElements(driver, FormPage.class);
 //	ListPage listPage = PageFactory.initElements(driver, ListPage.class);
 
-    @BeforeClass
+    @Before
     public static void openPage(){
         String libWithDriversLocation =  System.getProperty("user.dir") + "\\lib\\";
         System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
@@ -22,7 +22,7 @@ public class Task4 {
         driver.get("https://kristinek.github.io/test-sample/tasks/task3");
     }
 
-    @AfterClass
+    @After
     public static void closeBrowser(){
         driver.quit();
     }
