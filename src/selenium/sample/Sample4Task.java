@@ -43,7 +43,8 @@ public class Sample4Task {
 
         System.out.println("You entered number: \"" + number + "\"");
         System.out.println(driver.findElement(By.id("result_number")).getText());
-//        assertEquals("You entered number: \"7\"");
+        assertEquals("You entered number: \"" + number + "\"",
+                driver.findElement(By.id("result_number")).getText());
 //        TODO
 //        enter a number under "Number"
 //        click on "Result" button
