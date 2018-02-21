@@ -13,11 +13,14 @@ public class Sample1Task {
         //define driver
         System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-
         // TODO
         // go to https://kristinek.github.io/test-sample/index2.html
         // get title of page
         // get URL of current page
+
+        driver.get("https://kristinek.github.io/test-sample/index2.html");
+        System.out.println(driver.getTitle());
+        System.out.println(driver.getCurrentUrl());
 
         //Close browser
         driver.close();
