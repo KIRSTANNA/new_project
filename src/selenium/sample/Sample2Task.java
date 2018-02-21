@@ -34,27 +34,44 @@ public class Sample2Task {
 
     @Test
      public void findElementByID() throws Exception {
+
+        System.out.println(driver.findElement(By.id("heading_2")).getText());
         // TODO
         // get text "Heading 2 text" using id
     }
 
     @Test
     public void findElementByName() throws Exception {
+
+        System.out.println(driver.findElement(By.name("randomButton2")).getAttribute("value")); // "This is a button"
+        System.out.println(driver.findElement(By.name("randomButton2")).getAttribute("id")); //
+
         // TODO
         // get attribute "id" and "value" of button "This is also a button" using name
     }
     @Test
     public void findElementByClassFirst() throws Exception {
+
+        System.out.println(driver.findElement(By.className("test")).getText()); // "sample text 1"
+
         // TODO
         // get first text of class "test" (should be "Test Text 1")
     }
 
     @Test
     public void findElementByClassAll() throws Exception {
+
+        System.out.println(driver.findElements(By.className("test")).size());
+        System.out.println(driver.findElements(By.className("text")).size());
+        List <WebElement> allElementsWithClass = driver.findElements(By.className("text"));
+
+        for (WebElement elementWithClass : allElementsWithClass) {
+            System.out.println(elementWithClass.getText());
+
         // TODO
         // get size text of class "test" (should be 5)
         // get text of class "test"
         // get third text of class "test" (should be "Test Text 5")
 
     }
-}
+}}
