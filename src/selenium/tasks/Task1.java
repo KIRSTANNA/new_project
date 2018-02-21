@@ -25,6 +25,7 @@ public class Task1 {
     @Test
     public void errorOnText() {
 //        TODO
+
 //        enter a text instead of a number, check that correct error is seen
     }
 
