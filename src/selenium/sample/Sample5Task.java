@@ -6,6 +6,7 @@ import org.junit.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.junit.Assert.assertEquals;
@@ -13,6 +14,7 @@ import static org.junit.Assert.assertTrue;
 
 public class Sample5Task {
     WebDriver driver;
+
 
     // method which is being run before each test
     @Before
@@ -25,6 +27,8 @@ public class Sample5Task {
 
         //open page:
         driver.get("https://kristinek.github.io/test-sample/examples/al_and_pu");
+
+        String baseUrl = driver.getCurrentUrl();
     }
 
     // method which is being run after each test
@@ -43,6 +47,15 @@ public class Sample5Task {
 //        verify alert text
 //        click ok on second alert
 //        verify that the correct page is opened
+        WebElement button = driver.findElement(By.className("w3-blue"));
+        button.click();
+        Alert alert = driver.switchTo().alert();
+        alert.accept();
+        Alert alert2 = driver.switchTo().alert();
+        assertEquals("Booooooooo!", alert2.getText());
+        alert2.accept();
+        assertTrue("https://kristinek.github.io/test-sample/examples/al_p".equals(driver.getCurrentUrl()));
+        System.out.println();
     }
 
     @Test
@@ -52,5 +65,11 @@ public class Sample5Task {
 //        switch to alert
 //        click cancel
 //        verify the text on page
+        driver.findElement(By.className("w3-blue")).click();
+        Alert alert = driver.switchTo().alert();
+        assertEquals("Want to see an alerted page?!", alert.getText());
+        alert.dismiss();
+        assertEquals("So you desided to say? Good!",
+                driver.findElement(By.id("textForAlerts")).getText());
     }
 }
