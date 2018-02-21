@@ -12,7 +12,11 @@ public class Sample1Task {
     public void goToHomepage() throws Exception {
         //define driver
         System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver1 = new ChromeDriver();
+
+        driver1.get("https://kristinek.github.io/test-sample/");
+        System.out.println(driver1.getTitle());
+        System.out.println(driver1.getCurrentUrl());
 
         // TODO
         // go to https://kristinek.github.io/test-sample/index2.html
@@ -20,6 +24,6 @@ public class Sample1Task {
         // get URL of current page
 
         //Close browser
-        driver.close();
+        driver1.close();
     }
 }

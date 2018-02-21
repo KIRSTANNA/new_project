@@ -14,6 +14,10 @@ public class Sample1 {
         System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
+        driver.get ("https://kristinek.github.io/test-sample/");
+        System.out.println(driver.getTitle());
+        System.out.println(driver.getCurrentUrl());
+
         //open test homepage
         driver.get("https://kristinek.github.io/test-sample/");
 
