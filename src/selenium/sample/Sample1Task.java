@@ -15,11 +15,19 @@ public class Sample1Task {
         WebDriver driver = new ChromeDriver();
 
         // TODO
-        // go to https://kristinek.github.io/test-sample/index2.html
+        driver.get("https://kristinek.github.io/test-sample/index2.html");
+        // go to
         // get title of page
+        System.out.println(driver.getTitle());
         // get URL of current page
+        System.out.println(driver.getCurrentUrl());
+
 
         //Close browser
+
+        Thread.sleep(10000);
+
+
         driver.close();
     }
 }
