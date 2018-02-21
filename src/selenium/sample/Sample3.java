@@ -35,8 +35,8 @@ public class Sample3 {
 
     @Test
     public void assertEqualsExampleString() throws Exception {
-        String expected = "Base page";
-        String actual = driver.findElement(By.id("heading")).getText();
+        String expected = "heading1";
+        String actual = driver.findElement(By.id("heading1")).getText();
         assertEquals(expected, actual);
 
         // fails:

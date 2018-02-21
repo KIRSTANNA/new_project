@@ -1,6 +1,7 @@
 package selenium.sample;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -35,13 +36,17 @@ public class Sample3Task {
     public void assertEqualsTask() throws Exception {
 //         TODO:
 //         check how many element with class "test" there are on page (5)
+        Assert.assertEquals(5, driver.findElements(By.className("test")).size());
+
 //         check that value of second button is "This is also a button"
+        Assert.assertEquals("This is also a button", driver.findElement(By.id("buttonId")).getAttribute("value"));
     }
 
     @Test
     public void assertTrueTask() throws Exception {
 //         TODO:
 //         check that it is True that value of second button is "this is Also a Button" if you ignore Caps Locks
+        Assert.assertTrue(driver.findElement(By.id("buttonId")).getAttribute("value").equalsIgnoreCase("this is Also a button"));
     }
 
     @Test
