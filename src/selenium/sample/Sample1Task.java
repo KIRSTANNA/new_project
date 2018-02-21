@@ -18,6 +18,15 @@ public class Sample1Task {
         // go to https://kristinek.github.io/test-sample/index2.html
         // get title of page
         // get URL of current page
+        //open test homepage
+        driver.get("https://kristinek.github.io/test-sample/index2.html");
+
+        //get title of page
+        System.out.println(driver.getTitle());
+
+        //get URL of current page
+        System.out.println(driver.getCurrentUrl());
+
 
         //Close browser
         driver.close();
