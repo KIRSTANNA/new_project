@@ -35,11 +35,11 @@ public class Sample2 {
     @Test
      public void findElementByID() throws Exception {
         // works:
-        System.out.println(driver.findElement(By.id("heading")).getText());
+        System.out.println(driver.findElement(By.id("heading_1")).getText());
         // will fail with error NoSuchElementException
         // no such element:
         // Unable to locate element: {"method":"id","selector":"headingasdga"}
-        System.out.println(driver.findElement(By.id("headingasdga")).getText());
+        System.out.println(driver.findElement(By.id("heading_1")).getText());
     }
 
     @Test
