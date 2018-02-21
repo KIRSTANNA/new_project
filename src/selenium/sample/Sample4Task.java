@@ -38,6 +38,7 @@ public class Sample4Task {
         String number = "7";
         driver.findElement(By.id("number")).clear();
         driver.findElement(By.id("number")).sendKeys(number);
+        assertFalse(driver.findElement(By.id("clear_result_button_number")).isEnabled());
         driver.findElement(By.id("result_button_number")).click();
         assertTrue(driver.findElement(By.id("result_number")).isDisplayed());
 
@@ -45,6 +46,8 @@ public class Sample4Task {
         System.out.println(driver.findElement(By.id("result_number")).getText());
         assertEquals("You entered number: \"" + number + "\"",
                 driver.findElement(By.id("result_number")).getText());
+        assertTrue(driver.findElement(By.id("clear_result_button_number")).isEnabled());
+
 //        TODO
 //        enter a number under "Number"
 //        click on "Result" button
