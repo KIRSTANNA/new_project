@@ -47,6 +47,12 @@ public class Sample5Task {
 
     @Test
     public void doNotGoToAlertedPageViaButton() throws Exception {
+        driver.findElement(By.className("w3-blue")).click();
+        Alert alert = driver.switchTo().alert();
+        assertEquals("Want to see an alerted page?!", alert.getText());
+        alert.dismiss();
+        assertEquals("So you desided to say? Good!",
+                driver.findElement(By.id("textForAlerts")).getText());
 //        TODO
 //        click on "To go to alerted page press Ok. Or stay here" button
 //        switch to alert
