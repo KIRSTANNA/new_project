@@ -61,6 +61,10 @@ public class Sample4Task {
 
     @Test
     public void clickOnLink() throws Exception {
+        assertEquals(base_url, driver.getCurrentUrl());
+        driver.findElement(By.id("homepage_link")).click();
+        assertFalse(driver.getCurrentUrl().equals(base_url));
+        assertEquals(driver.getCurrentUrl(), "https://kristinek.github.io/test-sample/");
 //        TODO
 //        click on "This is a link to Homepage"
 //        verify that homepage is opened
