@@ -44,7 +44,7 @@ public class Sample4 {
     public void clickLink() throws Exception {
         assertEquals(base_url, driver.getCurrentUrl());
         driver.findElement(By.id("link1")).click();
-        assertEquals("Link Page 1", driver.findElement(By.tagName("h1")).getText());
+        assertEquals("Link Page 1", driver.findElement(By.id("h1")).getText());
         assertFalse(driver.getCurrentUrl().equals(base_url));
         assertEquals("https://kristinek.github.io/test-sample/examples/link1", driver.getCurrentUrl());
     }

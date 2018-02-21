@@ -36,7 +36,7 @@ public class Sample3Task {
         assertEquals(5, driver.findElements(By.className("test")).size());
         assertEquals("This is also a button",
                 driver.findElement(By.name("randomButton2")).getAttribute("value"));
-        
+
         assertEquals("This is also a button",
                 driver.findElement(By.id("buttonId")).getAttribute("value"));
 
@@ -47,6 +47,13 @@ public class Sample3Task {
 
     @Test
     public void assertTrueTask() throws Exception {
+       assertTrue(driver.findElement(By.id("buttonId")).getAttribute("value")
+                .equalsIgnoreCase("this is Also a Button"));
+
+        assertTrue("Expected text 'This is also a button'",
+                driver.findElement(By.id("buttonId")).getAttribute("value")
+                .equalsIgnoreCase("this is 7 Also a Button"));
+
 //         TODO:
 //         check that it is True that value of second button is "this is Also a Button" if you ignore Caps Locks
     }
