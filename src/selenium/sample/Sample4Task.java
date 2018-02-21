@@ -48,6 +48,8 @@ public class Sample4Task {
                 driver.findElement(By.id("result_number")).getText());
         assertTrue(driver.findElement(By.id("clear_result_button_number")).isEnabled());
 
+        driver.findElement(By.id("clear_result_button_number")).click();
+        assertFalse(driver.findElement(By.id("result_number")).isDisplayed());
 //        TODO
 //        enter a number under "Number"
 //        click on "Result" button
