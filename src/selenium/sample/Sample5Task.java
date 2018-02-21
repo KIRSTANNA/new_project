@@ -41,8 +41,7 @@ public class Sample5Task {
 //        switch to alert
         Alert alert = driver.switchTo().alert();
         assertEquals("Want to see an alerted page?!", alert.getText());
-        alert.dismiss();
-        assertEquals("So you desided to say? Good!",driver.findElement(By.id("textForAlerts")).getText());
+
         alert.accept();
 //        click ok
         Alert alert2=driver.switchTo().alert();
@@ -61,10 +60,15 @@ alert2.accept();
 //        TODO
 //        click on "To go to alerted page press Ok. Or stay here" button
         driver.findElement(By.className("w3-blue")).click();
-//        switch to alert
-        Alert alert=driver.switchTo().alert();
-//        click cancel
+        Alert alert = driver.switchTo().alert();
+        assertEquals("Want to see an alerted page?!", alert.getText());
         alert.dismiss();
+        assertEquals("So you desided to say? Good!",
+                driver.findElement(By.id("textForAlerts")).getText());
+//        switch to alert
+
+//        click cancel
+
 //        verify the text on page
     }
 }
