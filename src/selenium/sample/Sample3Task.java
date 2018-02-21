@@ -36,12 +36,21 @@ public class Sample3Task {
 //         TODO:
 //         check how many element with class "test" there are on page (5)
 //         check that value of second button is "This is also a button"
+        assertEquals(5,driver.findElements(By.className("test")).size());
+        assertEquals("This is also a button",driver.findElement(By.id("buttonId")).getAttribute("value"));
+        driver.findElements(By.className("test")).size();
     }
 
     @Test
     public void assertTrueTask() throws Exception {
 //         TODO:
 //         check that it is True that value of second button is "this is Also a Button" if you ignore Caps Locks
+        assertTrue(driver.findElement(By.id("buttonId")).getAttribute("value")
+                .equalsIgnoreCase("this is Also a Button"));
+//        .equalsIgnoreCase("this is Also a Button");
+        assertTrue("Expected text 'This is also a button'",
+                driver.findElement(By.id("buttonId")).getAttribute("value")
+                        .equalsIgnoreCase("this is 7 Also a Button"));
     }
 
     @Test
