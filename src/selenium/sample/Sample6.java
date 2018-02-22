@@ -52,7 +52,7 @@ public class Sample6 {
 //        find element by all classes using xPath
         System.out.println("Find element by all classes using xPath:");
         System.out.println("\t text of element with class 'text' is '" + driver.findElement(By.xpath("//*[@class='text']")).getText() + "'");
-        System.out.println("\t text of element with class 'text' and 'unbelievable' is '" + driver.findElement(By.xpath("//*[@class='text unbelievable']")).getText() + "'");
+        System.out.println("\t text of element with class 'text' and 'unbelievable' is '" + driver.findElement(By.xpath("//*[contains(@class='text unbelievable')]")).getText() + "'");
 
 //        find element by all classes using CSS
         System.out.println("Find element by all classes using CSS:");
