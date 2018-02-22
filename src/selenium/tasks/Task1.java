@@ -3,14 +3,19 @@ package selenium.tasks;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import static org.junit.Assert.assertTrue;
+
 
 public class Task1 {
     WebDriver driver;
 
     @Before
     public void openPage(){
+        assertTrue(true);
         String libWithDriversLocation =  System.getProperty("user.dir") + "\\lib\\";
         System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
         driver = new ChromeDriver();
@@ -24,18 +29,39 @@ public class Task1 {
 
     @Test
     public void errorOnText() {
+
+
+        driver.findElement(By.id("numb")).sendKeys("text");
+        driver.findElement(By.className("w3-btn")).click();
+        assertTrue(driver.findElement(By.id("ch1_error")).isDisplayed());
+
+
+
 //        TODO
 //        enter a text instead of a number, check that correct error is seen
     }
 
     @Test
     public void errorOnNumberTooSmall() {
+
+        driver.findElement(By.id("numb")).sendKeys("26");
+        driver.findElement(By.className("w3-btn")).click();
+        assertTrue(driver.findElement(By.id("ch1_error")).isDisplayed());
+
+
+
 //        TODO
 //        enter number which is too small (below 50), check that correct error is seen
     }
 
     @Test
     public void errorOnNumberTooBig() {
+
+        driver.findElement(By.id("numb")).sendKeys("256");
+        driver.findElement(By.className("w3-btn")).click();
+        assertTrue(driver.findElement(By.id("ch1_error")).isDisplayed());
+
+
 //        TODO
 //        enter number which is too big (above 100), check that correct error is seen
     }
