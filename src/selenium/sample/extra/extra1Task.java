@@ -50,7 +50,7 @@ public class extra1Task {
         assertEquals(driver.getCurrentUrl(), po_url);
 //        check that the page now is "https://kristinek.github.io/test-sample/examples/po"
     }
-
+////*[@id="buttonId"]
     @Test
     public void navigateForward() throws Exception {
 //        TODO

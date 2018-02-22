@@ -34,11 +34,13 @@ public class extra2Task {
 
     @Test
     public void  runningOnChrome() throws  Exception {
+        WebElement h1 = driver.findElement(By.xpath("/html/body/div[2]/h1"));//or we can use //h1, because there is only one "h1"
         System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
         driver = new ChromeDriver();
 //        TODO
-//        go to page https://kristinek.github.io/test-sample/examples/po
-//        check the background color of h1 element
+        driver.get("https://kristinek.github.io/test-sample/examples/po");//go to page https://kristinek.github.io/test-sample/examples/po
+        assertEquals("rgba(241, 241, 241)", h1.getCssValue("background-color"));//check the background color of h1 element
+
     }
 
     @Test

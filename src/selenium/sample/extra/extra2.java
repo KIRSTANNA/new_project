@@ -10,8 +10,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 
 import java.io.File;
-
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 
 public class extra2 {
