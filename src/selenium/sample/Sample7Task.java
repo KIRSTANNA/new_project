@@ -52,9 +52,12 @@ public class Sample7Task {
         assertFalse(driver.findElement(By.id("vfb-6-0")).isSelected());
         assertFalse(driver.findElement(By.id("vfb-6-2")).isSelected());
 //        tick  "Option 3"
+        driver.findElement(By.id("vfb-6-2")).click();
 //        click result
+        driver.findElement(By.id("result_button_checkbox")).click();
 //        check that text 'You selected value(s): Option 2, Option 3' is being displayed
-        System.out.println();
+        assertEquals("You selected value(s): Option 2, Option 3",
+                driver.findElement(By.id("result_checkbox")).getText());
     }
 
 
