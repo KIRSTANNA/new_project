@@ -49,9 +49,9 @@ public class Task2 {
 		 * 1) click on start loading green and blue button                                              +
 		 * 2) check that button does not appear, but loading text is seen instead for green             +
 		 * 3) check that button does not appear, but loading text is seen instead for green and blue    +
-		 * 4) check that button and loading green does not appear,
+		 * 4) check that button and loading green does not appear,                                      +
 		 * 		but loading text is seen instead for blue and success for green is seen                 +
-		 * 5) check that both button and loading text is not seen, success is seen instead
+		 * 5) check that both button and loading text is not seen, success is seen instead              +
 		 */
 		Thread.sleep(3000);
         assertTrue(driver.findElement(By.id("start_green_and_blue")).isDisplayed());

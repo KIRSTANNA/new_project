@@ -63,6 +63,10 @@ public class Sample7Task {
     @Test
     public void selectOption() throws Exception {
 //        select "Option 3" in Select
+        List<WebElement> radioButtons = driver.findElements(By.cssSelector("[type='radio']"));
+        for (WebElement radioButtons1 : radioButtons){
+            assertFalse(radioButtons1.isSelected());
+        }
 //        check that selected option is "Option 3"
 //        select "Option 2" in Select
 //        check that selected option is "Option 2"
