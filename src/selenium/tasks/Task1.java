@@ -40,9 +40,13 @@ public class Task1 {
     public void errorOnNumberTooSmall() {
 //        TODO
 //        enter number which is too small (below 50), check that correct error is seen
+
+
         driver.findElement(By.id("numb")).sendKeys("49");
         driver.findElement(By.className("w3-btn")).click();
         assertEquals("Number is too small", driver.findElement(By.id("ch1_error")).getText());
+
+//      with negative sign (-64), no error messages
     }
 
     @Test
@@ -59,10 +63,14 @@ public class Task1 {
 //        TODO
 //        enter a number between 50 and 100 digit in the input (square root of which doesn't have a remainder, e.g. 2 is square root of 4),
 //        then and press submit and check that correct no error is seen and check that square root is calculated correctly
-        driver.findElement(By.id("numb")).sendKeys("64");
+        int n1 = 64;
+        driver.findElement(By.id("numb")).sendKeys(String.valueOf(n1));
         driver.findElement(By.className("w3-btn")).click();
+
+
+
         Alert alert1 = driver.switchTo().alert();
-        assertEquals("Square root of 64 is 8.00", alert1.getText());
+        assertEquals("Square root of 64 is " + String.format("%3.2f",Math.sqrt(n1)).replace(',','.'), alert1.getText());
         alert1.accept();
         assertTrue("https://kristinek.github.io/test-sample/tasks/task1".equals(driver.getCurrentUrl()));
     }
@@ -72,10 +80,15 @@ public class Task1 {
 //        TODO
 //        enter a number between 50 and 100 digit in the input (square root of which doesn't have a remainder, e.g. 1.732.. is square root of 3) and press submit,
 //        then check that correct no error is seen and check that square root is calculated correctly
-        driver.findElement(By.id("numb")).sendKeys("99");
+
+        int n1 = 99;
+        driver.findElement(By.id("numb")).sendKeys(String.valueOf(n1));
         driver.findElement(By.className("w3-btn")).click();
+
+
+
         Alert alert1 = driver.switchTo().alert();
-        assertEquals("Square root of 99 is 9.95", alert1.getText());
+        assertEquals("Square root of 99 is " + String.format("%3.2f",Math.sqrt(n1)).replace(',','.'), alert1.getText());
         alert1.accept();
         assertTrue("https://kristinek.github.io/test-sample/tasks/task1".equals(driver.getCurrentUrl()));
     }
