@@ -52,14 +52,15 @@ public class Sample6Task {
         System.out.println(driver.findElement(By.xpath("//p[contains(text(), \"4\")]")).getText());
         System.out.println(driver.findElement(By.xpath("//*[@id='test3']/p[2]")).getText());
         System.out.println("--------------------");
+//        "Test Text 5"
+        System.out.println(driver.findElement(By.xpath("//p[contains(text(), \"5\")]")).getText());
+        System.out.println(driver.findElement(By.xpath("//*[@class='Test']")).getText());
+        System.out.println("--------------------");
 
-//        TODO
-//         2-3 ways to write xpath to
-//              * "Test Text 3"
-//              * "Test Text 4"
-//              * "Test Text 5"
-//              * "Test Text 6"
 //              * "This is also a button"
+        System.out.println(driver.findElement(By.xpath("//*[@id='buttonId']")).getAttribute("value"));
+        System.out.println(driver.findElement(By.xpath("//*[@name='randomButton2']")).getText());
+        System.out.println("--------------------");
     }
 
     @Test
