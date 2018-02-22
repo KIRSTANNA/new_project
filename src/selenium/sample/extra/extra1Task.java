@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class extra1Task {
     WebDriver driver;
@@ -41,8 +41,8 @@ public class extra1Task {
 //        TODO
         driver.get("https://kristinek.github.io/test-sample/examples/po");
 //        open page with url "https://kristinek.github.io/test-sample/examples/po"
-        driver.findElement(By.cssSelector("a[po]")).click();
-        //        click "More > " for the top left element
+        driver.findElement(By.xpath("/html/body/div[3]/div[2]/div/div/p/a")).click();
+        //        click "More > " for the top right element
         assertEquals(driver.getCurrentUrl(),po1_url);
 //        check that the url now "https://kristinek.github.io/test-sample/examples/po1"
         driver.navigate().back();
@@ -54,20 +54,30 @@ public class extra1Task {
     @Test
     public void navigateForward() throws Exception {
 //        TODO
+        driver.get(po_url);
 //        open page with url "https://kristinek.github.io/test-sample/examples/po"
 //        click "More > " for the top left element
-//        using driver navigation go back to "https://kristinek.github.io/test-sample/examples/po"
-//        using driver navigation go forward to "https://kristinek.github.io/test-sample/examples/po1"
-//        check that the page now is "https://kristinek.github.io/test-sample/examples/po1"
+        driver.findElement(By.xpath("/html/body/div[3]/div[1]/div/div/p[2]/a")).click();
+        assertEquals(driver.getCurrentUrl(),po1_url);
+        driver.navigate().back();//        using driver navigation go back to "https://kristinek.github.io/test-sample/examples/po"
+        assertEquals(driver.getCurrentUrl(),po_url);
+        driver.navigate().forward();//        using driver navigation go forward to "https://kristinek.github.io/test-sample/examples/po1"
+        assertEquals(driver.getCurrentUrl(),po1_url);//        check that the page now is "https://kristinek.github.io/test-sample/examples/po1"
+
     }
 
     @Test
     public void refresh() throws Exception {
 //        TODO
 //        open page "https://kristinek.github.io/test-sample/examples/act"
+        driver.get(base_url);
 //        click on "Show" button in 'Button' section
+        driver.findElement(By.id("show_text")).click();
 //        check that text "I am here!" is seen
+        assertTrue(driver.findElement(By.id("show_me")) .isDisplayed());
 //        refresh page
+        driver.navigate().refresh();
 //        check that text "I am here!" is not seen
+        assertFalse(driver.findElement(By.id("show_me")).isDisplayed());
     }
 }

@@ -32,7 +32,7 @@ public class Task1 {
 //        enter a text instead of a number, check that correct error is seen
         driver.findElement(By.id("numb")).sendKeys("This is the text");
         driver.findElement(By.className("w3-btn")).click();
-        assertTrue(driver.findElement(By.id("ch1_error")).isDisplayed());
+        assertEquals("Please enter a number", driver.findElement(By.id("ch1_error")).getText());
 
     }
 
@@ -42,8 +42,8 @@ public class Task1 {
 //        enter number which is too small (below 50), check that correct error is seen
         driver.findElement(By.id("numb")).sendKeys("21");
         driver.findElement(By.className("w3-btn")).click();
+        assertEquals("Number is too small", driver.findElement(By.id("ch1_error")).getText());
 
-        assertTrue(driver.findElement(By.id("ch1_error")).isDisplayed());
     }
 
     @Test
@@ -52,7 +52,8 @@ public class Task1 {
 //        enter number which is too big (above 100), check that correct error is seen
         driver.findElement(By.id("numb")).sendKeys("111");
         driver.findElement(By.className("w3-btn")).click();
-        assertTrue(driver.findElement(By.id("ch1_error")).isDisplayed());
+        assertEquals("Number is too big", driver.findElement(By.id("ch1_error")).getText());
+
     }
 
     @Test
