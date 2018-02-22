@@ -67,7 +67,7 @@ public class Task1 {
 //        then and press submit and check that correct no error is seen and check that square root is calculated correctly
         driver.findElement(By.id("numb")).sendKeys("64");
         driver.findElement(By.className("w3-btn")).click();
-        
+
     }
 
     @Test

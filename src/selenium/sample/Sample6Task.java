@@ -34,14 +34,36 @@ public class Sample6Task {
     public void findElementByXPath() throws Exception {
 //        TODO
 //         2-3 ways to write xpath to
-//              * "Hading 2 text"
-//              * "Test Text 1"
-//              * "Test Text 2"
-//              * "Test Text 3"
-//              * "Test Text 4"
-//              * "Test Text 5"
-//              * "Test Text 6"
+//        "Heading 2 text":
+        System.out.println(driver.findElement(By.xpath("//*[@id=\"heading_2\"]")).getText());
+        System.out.println(driver.findElement(By.xpath("//*[text()=\"Heading 2 text\"]")).getAttribute("id"));
+        System.out.println("--------------------");
+//        "Test Text 1"
+        System.out.println(driver.findElement(By.xpath("//*[@id='test1']/p[@class='test']")).getText());
+        System.out.println(driver.findElement(By.xpath("//*[@id='test1']/p[1]")).getText());
+        System.out.println("--------------------");
+//        "Test Text 2"
+        System.out.println(driver.findElement(By.xpath("//*[@id='test1']/p[2]")).getText());
+        System.out.println(driver.findElements(By.xpath("//*[@id='test1']/p")).get(1).getText());
+        System.out.println("--------------------");
+//        "Test Text 3"
+        System.out.println(driver.findElement(By.xpath("//*[@id='test3']/*[@class='test']")).getText());
+        System.out.println(driver.findElement(By.xpath("//*[@id='test3']/p")).getText());
+        System.out.println("--------------------"); //*[@id="nonStandartText"]/p[2]
+                                                     //*[@id="nonStandartText"]/p
+//        "Test Text 4"
+        System.out.println(driver.findElement(By.xpath("//p[contains(text(), \"4\")]")).getText());
+        System.out.println(driver.findElement(By.xpath("//*[@id='test3']/p[2]")).getText());
+        System.out.println("--------------------");
+//        "Test Text 5"
+        System.out.println(driver.findElement(By.xpath("//p[contains(text(), \"5\")]")).getText());
+        System.out.println(driver.findElement(By.xpath("//*[@class='Test']")).getText());
+        System.out.println("--------------------");
+
 //              * "This is also a button"
+        System.out.println(driver.findElement(By.xpath("//*[@id='buttonId']")).getAttribute("value"));
+        System.out.println(driver.findElement(By.xpath("//*[@name='randomButton2']")).getText());
+        System.out.println("--------------------");
     }
 
     @Test
@@ -49,12 +71,24 @@ public class Sample6Task {
 //        TODO
 //         1-2 ways to write css to
 //              * "Hading 2 text"
+        System.out.println(driver.findElement(By.cssSelector("#heading_2")).getText());
+        System.out.println(driver.findElement(By.cssSelector("#heading_2")).getAttribute("id"));
+        System.out.println("--------------------");
 //              * "Test Text 1"
+        System.out.println(driver.findElement(By.cssSelector("#test1 > p.test")).getText());
+        System.out.println(driver.findElement(By.cssSelector("#test1 > p:nth-of-type(1)")).getText());
+        System.out.println("--------------------");
 //              * "Test Text 2"
+        System.out.println(driver.findElement(By.cssSelector("#test1 > p:nth-of-type(2)")).getText());
+        System.out.println(driver.findElements(By.cssSelector("#test1 > p")).get(1).getText());
+        System.out.println("--------------------");
 //              * "Test Text 3"
 //              * "Test Text 4"
 //              * "Test Text 5"
 //              * "Test Text 6"
 //              * "This is also a button"
+        System.out.println(driver.findElement(By.xpath("//*[@id='buttonId']")).getAttribute("value"));
+        System.out.println(driver.findElement(By.xpath("//*[@name='randomButton2']")).getText());
+        System.out.println("--------------------");
     }
 }

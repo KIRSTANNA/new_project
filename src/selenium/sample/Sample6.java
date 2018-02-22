@@ -76,13 +76,17 @@ public class Sample6 {
     public void findElementByIdAndClass() throws Exception {
 //        find element by id and class using xPath
         System.out.println("Find element by id and classes using xPath:");
-        System.out.println("\t text of element with class 'text' and id 'dummy' is '" + driver.findElement(By.xpath("//*[contains(@class, 'text') and @id='dummy']")).getText() + "'");
-        System.out.println("\t text of element with class 'text' and id 'dummy' v2 is '" + driver.findElement(By.xpath("//*[@class='text' and @id='dummy']")).getText() + "'");
+        System.out.println("\t text of element with class 'text' and id 'dummy' is '" +
+                driver.findElement(By.xpath("//*[contains(@class, 'text') and @id='dummy']")).getText() + "'");
+        System.out.println("\t text of element with class 'text' and id 'dummy' v2 is '" +
+                driver.findElement(By.xpath("//*[@class='text' and @id='dummy']")).getText() + "'");
 
 //        find element by id and class using CSS
         System.out.println("Find element by id and classes using CSS:");
-        System.out.println("\t text of element with class 'text' and id 'dummy' is '" + driver.findElement(By.cssSelector(".text#dummy")).getText() + "'");
-        System.out.println("\t text of element with class 'text' and id 'dummy' v2 is '" + driver.findElement(By.cssSelector("#dummy.text")).getText() + "'");
+        System.out.println("\t text of element with class 'text' and id 'dummy' is '" +
+                driver.findElement(By.cssSelector(".text#dummy")).getText() + "'");
+        System.out.println("\t text of element with class 'text' and id 'dummy' v2 is '" +
+                driver.findElement(By.cssSelector("#dummy.text")).getText() + "'");
     }
 
     @Test
