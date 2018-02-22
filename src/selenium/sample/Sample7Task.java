@@ -85,17 +85,22 @@ public class Sample7Task {
 //        check that 'You selected option: Option 1' text is being displayed
         assertEquals("You selected option: Option 1",
                 driver.findElement(By.id("result_radio")).getText());
-        System.out.println();
     }
 
     @Test
     public void selectOption() throws Exception {
 //        select "Option 3" in Select
+        Select dropdown = new Select(driver.findElement(By.id("vfb-12")));
+        dropdown.selectByVisibleText("Option 3");
+
 //        check that selected option is "Option 3"
+        assertEquals("Option 3", dropdown.getFirstSelectedOption().getText());
+
 //        select "Option 2" in Select
 //        check that selected option is "Option 2"
 //        click result
 //        check that 'You selected option: Option 2' text is being displayed
+        System.out.println();
     }
 
     @Test
