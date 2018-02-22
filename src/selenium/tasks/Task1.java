@@ -60,7 +60,7 @@ public class Task1 {
         textArea.sendKeys(newIntOne);
         WebElement button = driver.findElement(By.className("w3-btn"));
         button.click();
-        assertEquals("NNumber is too big", driver.findElement(By.id("ch1_error")).getText());
+        assertEquals("Number is too big", driver.findElement(By.id("ch1_error")).getText());
 //        enter number which is too big (above 100), check that correct error is seen
     }
 
