@@ -40,11 +40,11 @@ https://trello.com/invite/b/1P90Yjg9/5e24c5b205572d5c9b00ef18d284471f/bootcamp
 * Locators (xPath, CSS):
     * [Sample6.java](../master/src/selenium/sample/Sample6.java)
     * [Sample6Task.java](../master/src/selenium/sample/Sample6Task.java)
-    
-### TBC Samples
 * Actions (checkbox, radio button and option selector) + bonus of calendar:
     * [Sample7.java](../master/src/selenium/sample/Sample7.java)
     * [Sample7Task.java](../master/src/selenium/sample/Sample7Task.java)
+    
+### TBC Samples
 * Styles:
     * [Sample8.java](../master/src/selenium/sample/Sample8.java)
     * [Sample8Task.java](../master/src/selenium/sample/Sample8Task.java)
