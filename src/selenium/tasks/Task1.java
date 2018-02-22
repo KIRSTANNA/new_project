@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import static java.lang.StrictMath.sqrt;
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertTrue;
 
@@ -76,6 +77,15 @@ public class Task1 {
         Alert alert2 = driver.switchTo().alert();
         assertEquals("Square root of 100 is 10.00", alert2.getText());
         alert2.accept();
+        //try to check if the program is calculating correctly:
+        //String myNumb = "100";
+        //String myRoot = "10";
+        //int numb = Integer.parseInt(myNumb);
+        //int root = Integer.parseInt(myRoot);
+
+
+
+
     }
 
     @Test
@@ -90,6 +100,9 @@ public class Task1 {
         Alert alert2 = driver.switchTo().alert();
         assertEquals("Square root of 50 is 7.07", alert2.getText());
         alert2.accept();
+        //try to
+        String checkNumber = "50";
+        double checkRoot = sqrt(Double.parseDouble(checkNumber));
     }
 
     @Test
