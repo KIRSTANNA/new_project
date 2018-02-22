@@ -35,6 +35,18 @@ public class Sample4Task {
 
     @Test
     public void enterNumber() throws Exception {
+        driver.findElement(By.id("number")).clear();
+        driver.findElement(By.id("number")).sendKeys("7");
+        driver.findElement(By.id("result_button_number")).click();
+        assertTrue(driver.findElement(By.id("result_number")).isDisplayed());
+        System.out.println(driver.findElements(By.id("result_number")).getText());
+        assertEquals("You entered number:\"?\"");
+        driver.findElement(By.id("result_number").getText());
+        assertTrue(driver.findElement(By.id("clear_result_button_number")).isEnabled());
+        driver.findElement(By.id("clear_result_button_number")).click();
+        assertFalse(driver.findElement(By.id("result_number")).isDisplayed());
+
+
 //        TODO
 //        enter a number under "Number"
 //        click on "Result" button
@@ -46,6 +58,11 @@ public class Sample4Task {
 
     @Test
     public void clickOnLink() throws Exception {
+        assertEquals(base_url, driver.getCurrentUrl());
+        driver.findElement(By.id("homepage_link")).click();
+        assertFalse(driver.getCurrentUrl().equals(base_url));
+        assertEquals(driver.getCurrentUrl(), "https://kristinek.github.io/test-sample/");
+
 //        TODO
 //        click on "This is a link to Homepage"
 //        verify that homepage is opened
