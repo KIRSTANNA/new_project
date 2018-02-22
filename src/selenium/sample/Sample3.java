@@ -1,17 +1,16 @@
+/*
 package selenium.sample;
 
 import org.junit.After;
 import org.junit.Before;
-import org.junit.ComparisonFailure;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.junit.Assert.*;
-import static org.junit.Assert.assertTrue;
 
-public class Sample3 {
+public class Sample3Task {
     WebDriver driver;
 
     // method which is being run before each test
@@ -34,83 +33,29 @@ public class Sample3 {
     }
 
     @Test
-    public void assertEqualsExampleString() throws Exception {
-        String expected = "Base page";
-        String actual = driver.findElement(By.id("heading")).getText();
-        assertEquals(expected, actual);
-
-        // fails:
-//        org.junit.ComparisonFailure:
-//        Expected :Not base page
-//        Actual   :Base page
-        expected = "Not base page";
-        assertEquals(expected, actual);
+    public void assertEqualsTask() throws Exception {
+//         TODO:
+//         check how many element with class "test" there are on page (5)
+//         check that value of second button is "This is also a button"
     }
 
     @Test
-    public void assertEqualsExampleInt() throws Exception {
-        int expectedNumberOfElements = 5;
-        int actualNumberOfElements = driver.findElements(By.className("text")).size();
-        assertEquals(expectedNumberOfElements, actualNumberOfElements);
+    public void assertTrueTask() throws Exception {
+//         TODO:
+//         check that it is True that value of second button is "this is Also a Button" if you ignore Caps Locks
+           assertTrue("This is Also a Button",driver.findElement(By.Id("ButtonId")) .getAttribute(("value")).equalsIgnoreCase(("this is Also a Button")));
     }
 
     @Test
-    public void assertTrueExamples() throws Exception {
-        String elementTextOnPage = driver.findElement(By.cssSelector(".unbelievable")).getText();
-        assertTrue(elementTextOnPage.equals("unbelievable sample text"));
-        assertTrue(elementTextOnPage.contains("ample"));
-        assertTrue(elementTextOnPage.equalsIgnoreCase("unBELIEVable sAMPle Text"));
-        // pass:
-        assertTrue(true);
-        // fail:
-//        assertTrue(false);
+    public void assertFalseTask() throws Exception {
+//         TODO:
+//        check that it is False that value of second button is "This is a button"
     }
 
     @Test
-    public void assertFalseExample() throws Exception {
-        String elementTextOnPage = driver.findElement(By.cssSelector(".unbelievable")).getText();
-        assertFalse(!elementTextOnPage.equals("unbelievable sample text"));
-        assertFalse(elementTextOnPage.equals("wrong text"));
-        assertFalse(elementTextOnPage.contains("wrong text"));
-        // fail:
-//        assertFalse(true);
-        // pass:
-        assertFalse(false);
-    }
-
-    @Test
-    public void failExampleWithDefaultError() throws Exception {
-        fail();
-        // will throw an java.lang.AssertionError
-    }
-
-    @Test
-    public void failExampleWithCustomError() throws Exception {
-        fail("I want this test to fail, so will!");
-        // will throw an java.lang.AssertionError: I want this test to fail, so will!
-    }
-
-    @Test
-    public void assertEqualsExampleWithDefaultError() throws Exception {
-        try {
-            assertEquals(3, 4);
-        } catch (AssertionError e) {
-            System.err.println("We failed ");
-            e.printStackTrace();
-//            We failed
-//            java.lang.AssertionError: expected:<3> but was:<4>
-        }
-    }
-
-    @Test
-    public void assertEqualsExampleWithCustomError() throws Exception {
-        try {
-            assertEquals("custom message", 3, 4);
-        } catch (AssertionError e) {
-            System.err.println("We failed with custom message”");
-            e.printStackTrace();
-        }
-//        We failed with custom message”
-//        java.lang.AssertionError: custom message expected:<3> but was:<4>
+    public void failTask() throws Exception {
+//        TODO:
+//        check that none of items with class "test" contain number 190
     }
 }
+*/

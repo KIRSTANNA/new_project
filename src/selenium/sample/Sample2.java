@@ -33,7 +33,7 @@ public class Sample2 {
     }
 
     @Test
-     public void findElementByID() throws Exception {
+    public void findElementByID() throws Exception {
         // works:
         System.out.println(driver.findElement(By.id("heading")).getText());
         // will fail with error NoSuchElementException
@@ -67,11 +67,11 @@ public class Sample2 {
 
         for (WebElement elementWithClass : allElementsWithClass) {
             System.out.println(elementWithClass.getText());
-    //            sample text 1
-    //            sample text 2
-    //            unbelievable sample text
-    //            amazing sample text
-    //            dummy text
+            //            sample text 1
+            //            sample text 2
+            //            unbelievable sample text
+            //            amazing sample text
+            //            dummy text
         }
         System.out.println(driver.findElements(By.className("text")).get(2).getText()); // "unbelievable sample text"
     }

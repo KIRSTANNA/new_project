@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class Sample4Task {
     WebDriver driver;
@@ -35,7 +36,22 @@ public class Sample4Task {
 
     @Test
     public void enterNumber() throws Exception {
-//        TODO
+        String number = "7";
+        driver.findElement(By.id("number")).clear();
+        driver.findElement(By.id("number")).sendKeys(number);
+        assertFalse(driver.findElement(By.id("clear_result_button_number")).isEnabled());
+        driver.findElement(By.id("result_button_number")).click();
+        assertTrue(driver.findElement(By.id("result_number")).isDisplayed());
+
+        System.out.println("You entered number: \"" + number + "\"");
+        System.out.println(driver.findElement(By.id("result_number")).getText());
+        assertEquals("You entered number: \"" + number + "\"",
+                driver.findElement(By.id("result_number")).getText());
+        assertTrue(driver.findElement(By.id("clear_result_button_number")).isEnabled());
+
+        driver.findElement(By.id("clear_result_button_number")).click();
+        assertFalse(driver.findElement(By.id("result_number")).isDisplayed());
+//        TODOresult_button_number
 //        enter a number under "Number"
 //        click on "Result" button
 //        check that the correct Text appears ("You entered number: "NUMBER YOU ENTERED"")
@@ -46,7 +62,11 @@ public class Sample4Task {
 
     @Test
     public void clickOnLink() throws Exception {
-//        TODO
+        assertEquals(base_url,driver.getCurrentUrl());
+        driver.findElement(By.id("homepage_link")).click();
+        assertFalse(driver.getCurrentUrl().equals(base_url));
+        assertEquals(driver.getCurrentUrl(),"https://kristinek.github.io/test-sample/");
+// TODO
 //        click on "This is a link to Homepage"
 //        verify that homepage is opened
     }
