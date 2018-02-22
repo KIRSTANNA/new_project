@@ -81,7 +81,10 @@ public class Sample7Task {
         assertFalse(driver.findElement(By.cssSelector("[value='Option 3'][type='radio']")).isSelected());
         assertTrue(driver.findElement(By.cssSelector("[value='Option 1'][type='radio']")).isSelected());
 //        click result
+        driver.findElement(By.id("result_button_ratio")).click();
 //        check that 'You selected option: Option 1' text is being displayed
+        assertEquals("You selected option: Option 1",
+                driver.findElement(By.id("result_radio")).getText());
         System.out.println();
     }
 
