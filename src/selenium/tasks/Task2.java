@@ -1,8 +1,10 @@
 package selenium.tasks;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -29,6 +31,12 @@ public class Task2 {
 		 * 2) check that button does not appear, but loading text is seen instead
 		 * 3) check that both button and loading text is not seen, success is seen instead
 		 */
+		driver.findElement(By.id("start_green")).click();
+        Assert.assertFalse(driver.findElement(By.id("start_green")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.id("loading_green")).isDisplayed());
+        System.out.println("---------------");
+
+
     }
 
     @Test
