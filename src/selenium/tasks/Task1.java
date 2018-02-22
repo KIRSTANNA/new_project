@@ -78,6 +78,11 @@ public class Task1 {
 
     @Test
     public void correctSquareRootWithRemainder() {
+        driver.findElement(By.id("numb"));
+        driver.findElement(By.id("numb")).sendKeys("80");
+        driver.findElement(By.tagName("button")).click();
+        Alert alert = driver.switchTo().alert();
+        assertEquals("Square root of 80 is 8.94",alert.getText());
 //        TODO
 //        enter a number between 50 and 100 digit in the input (square root of which doesn't have a remainder, e.g. 1.732.. is square root of 3) and press submit,
 //        then check that correct no error is seen and check that square root is calculated correctly
