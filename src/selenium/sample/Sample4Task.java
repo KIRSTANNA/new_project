@@ -33,8 +33,20 @@ public class Sample4Task {
         driver.close();
     }
 
-    @Test
-    public void enterNumber() throws Exception {
+   // @Test
+   // public void enterNumber() throws Exception {
+
+       // driver.findElement(By.id("number")). clear();
+        //driver.findElement(By.id("number")). sendKeys("7");
+        //driver.findElement(By.id("result_button_number")). click();
+       // assertTrue(driver.findElement(By.id("result_number")). isDisplayed());
+       // System.out.println("You entered number: \"" + number + "\"");
+       // System.out.println(driver.findElement(By.id("result_number")).getText());
+
+       // assertTrue(driver.findElement(By.id("clear_result_button_number")).isEnabled());
+           // driver.findElement(By.id("result_numbet")).getText();
+
+
 //        TODO
 //        enter a number under "Number"
 //        click on "Result" button
@@ -42,10 +54,15 @@ public class Sample4Task {
 //        check that the button "Clear Result" is active now
 //        click on "Clear Result"
 //        check that the text is still ("You entered number: "NUMBER YOU ENTERED""), but it is not displayed
-    }
+   // }
 
     @Test
     public void clickOnLink() throws Exception {
+        assertEquals(base_url, driver.getCurrentUrl());
+        driver.findElement(By.id("Homepage_link")).click();
+        assertEquals(driver.getCurrentUrl(), base_url);
+        assertEquals(driver.getCurrentUrl(), "https://kristinek.github.io/test-sample/");
+
 //        TODO
 //        click on "This is a link to Homepage"
 //        verify that homepage is opened

@@ -62,16 +62,17 @@ public class Sample2Task {
     public void findElementByClassAll() throws Exception {
 
         System.out.println(driver.findElements(By.className("test")).size());
-        System.out.println(driver.findElements(By.className("text")).size());
-        List <WebElement> allElementsWithClass = driver.findElements(By.className("text"));
-
-        for (WebElement elementWithClass : allElementsWithClass) {
-            System.out.println(elementWithClass.getText());
-
+        System.out.println("--------------------------");
+        List<WebElement> allElementsWithClass = driver.findElements(By.className("test"));
+        for (WebElement elementWithClasses : allElementsWithClass) {
+            System.out.println(elementWithClasses.getText());
+        }
+        System.out.println("------------------");
+        System.out.println(driver.findElements(By.className("test")).get(3).getText());
         // TODO
         // get size text of class "test" (should be 5)
         // get text of class "test"
         // get third text of class "test" (should be "Test Text 5")
 
     }
-}}
+}

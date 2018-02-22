@@ -15,6 +15,7 @@ public class Sample3Task {
     // method which is being run before each test
     @Before
     public void startingTests() throws Exception {
+
         // from Sample 1:
         String libWithDriversLocation =  System.getProperty("user.dir") + "\\lib\\";
         System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
@@ -33,13 +34,19 @@ public class Sample3Task {
 
     @Test
     public void assertEqualsTask() throws Exception {
+        assertEquals(8, driver.findElements(By.className("test")). size());
+        assertEquals("This is also a button", driver.findElement(By.id("buttonId")). getAttribute("value"));
+
+
 //         TODO:
 //         check how many element with class "test" there are on page (5)
-//         check that value of second button is "This is also a button"
+//         check that value of second button is "his is also a button"
     }
 
     @Test
     public void assertTrueTask() throws Exception {
+//        assertTrue(driver.findElements(By.id("buttonId"));
+//        assertEquals ("this is Also a Button".
 //         TODO:
 //         check that it is True that value of second button is "this is Also a Button" if you ignore Caps Locks
     }

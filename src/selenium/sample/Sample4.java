@@ -42,9 +42,9 @@ public class Sample4 {
 
     @Test
     public void clickLink() throws Exception {
-        assertEquals(base_url, driver.getCurrentUrl());
+        assertEquals(base_url, driver.getCurrentUrl());//identifies original page
         driver.findElement(By.id("link1")).click();
-        assertEquals("Link Page 1", driver.findElement(By.tagName("h1")).getText());
+        assertEquals("Link Page 1", driver.findElement(By.tagName("h1")).getText());//h1 should contains "Link page 1"
         assertFalse(driver.getCurrentUrl().equals(base_url));
         assertEquals("https://kristinek.github.io/test-sample/examples/link1", driver.getCurrentUrl());
     }
@@ -116,7 +116,7 @@ public class Sample4 {
         assertEquals(textInput.getAttribute("value"), originalText + sendKeyOne);
         // checking that value is "This is a text box" + " bla-bla"
 
-        textInput.clear();
+
         assertEquals(textInput.getText(), ""); // checking that getText is empty
         assertEquals(textInput.getAttribute("value"), ""); // checking that value is also empty
 

@@ -62,10 +62,11 @@ public class Sample2 {
 
     @Test
     public void findElementByClassAll() throws Exception {
-        System.out.println(driver.findElements(By.id("headingasdga")).size()); // 0
+        System.out.println(driver.findElements(By.id("text")).size()); // 0
         System.out.println(driver.findElements(By.className("text")).size()); // 5
-        List<WebElement> allElemetsWithClass = driver.findElements(By.className("test"));
-        for (WebElement elementWithClasses : allElemetsWithClass) {
+        List<WebElement> allElementsWithClass = driver.findElements(By.className("test"));
+
+        for (WebElement elementWithClasses : allElementsWithClass) {
             System.out.println(elementWithClasses.getText());
 
     //            sample text 1

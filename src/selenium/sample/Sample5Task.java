@@ -14,9 +14,17 @@ import static org.junit.Assert.assertTrue;
 public class Sample5Task {
     WebDriver driver;
 
+
     // method which is being run before each test
     @Before
     public void startingTests() throws Exception {
+        driver.findElement(By.className("w3-blue")).click();
+        Alert alert = driver.switchTo().alert();
+        assertEquals("Want to see an alerted page?!", alert.getText());
+            alert.dismiss();
+            assertEquals("So you desided to say? Good!",
+                    driver.findElement(By.id("textForAlerts")).getText());
+
         // from Sample 1:
         String libWithDriversLocation =  System.getProperty("user.dir") + "\\lib\\";
         System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
@@ -31,6 +39,7 @@ public class Sample5Task {
     @After
     public void endingTests() throws Exception {
         driver.close();
+
     }
 
     @Test
