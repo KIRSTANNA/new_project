@@ -72,7 +72,7 @@ https://trello.com/invite/b/1P90Yjg9/5e24c5b205572d5c9b00ef18d284471f/bootcamp
 git fetch
 git checkout origin/master -- src/selenium/tasks/ .gitignore
 cd src/selenium/sample/
-git checkout origin/master  -- Sample6.java Sample6Task.java Sample7.java Sample8.java Sample9.java Sample10.java extra/ Sample8Task.java Sample7Task.java
+git checkout origin/master -- Sample6.java Sample6Task.java Sample7.java Sample8.java Sample9.java Sample10.java extra/ Sample8Task.java Sample7Task.java
 git add .
 git commit -m "new files"
 git push
