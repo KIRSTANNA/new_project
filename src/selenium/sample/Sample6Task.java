@@ -35,18 +35,22 @@ public class Sample6Task {
 //        "Heading 2 text":
         System.out.println(driver.findElement(By.xpath("//*[@id=\"heading_2\"]")).getText());
         System.out.println(driver.findElement(By.xpath("//*[text()=\"Heading 2 text\"]")).getAttribute("id"));
-
+        System.out.println("--------------------");
 //        "Test Text 1"
         System.out.println(driver.findElement(By.xpath("//*[@id='test1']/p[@class='test']")).getText());
         System.out.println(driver.findElement(By.xpath("//*[@id='test1']/p[1]")).getText());
-
+        System.out.println("--------------------");
 //        "Test Text 2"
         System.out.println(driver.findElement(By.xpath("//*[@id='test1']/p[2]")).getText());
         System.out.println(driver.findElements(By.xpath("//*[@id='test1']/p")).get(1).getText());
-        //*[@id='test1']/p[2]
+        System.out.println("--------------------");
+//        "Test Text 3"
+        System.out.println(driver.findElement(By.xpath("//*[@id='test3']/*[@class='test']")).getText());
+        System.out.println(driver.findElement(By.xpath("")).getText());
+        System.out.println("--------------------");
+
 //        TODO
 //         2-3 ways to write xpath to
-//              * "Test Text 2"
 //              * "Test Text 3"
 //              * "Test Text 4"
 //              * "Test Text 5"
