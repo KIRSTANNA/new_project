@@ -3,15 +3,14 @@ package selenium.sample;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
-public class Sample5Task {
+public class Sample8Task {
     WebDriver driver;
 
     // method which is being run before each test
@@ -24,7 +23,7 @@ public class Sample5Task {
         driver = new ChromeDriver();
 
         //open page:
-        driver.get("https://kristinek.github.io/test-sample/examples/al_and_pu");
+        driver.get("https://kristinek.github.io/test-sample/examples/po");
     }
 
     // method which is being run after each test
@@ -34,25 +33,8 @@ public class Sample5Task {
     }
 
     @Test
-    public void goToAlertedPageViaButton() throws Exception {
-//        TODO
-//        click on "To go to alerted page press Ok. Or stay here" button
-//        switch to alert
-//        click ok
-//        switch to second alert
-//        verify alert text
-//        click ok on second alert
-//        verify that the correct page is opened
-        driver.findElement (By.className())
-                Alert alert = driver
-    }
-
-    @Test
-    public void doNotGoToAlertedPageViaButton() throws Exception {
-//        TODO
-//        click on "To go to alerted page press Ok. Or stay here" button
-//        switch to alert
-//        click cancel
-//        verify the text on page
+    public void styleChecks() throws Exception {
+//        check the background of top 2 sections
+//        check h1 element font-size, font-family
     }
 }

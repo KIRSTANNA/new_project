@@ -42,7 +42,7 @@ public class Sample4 {
 
     @Test
     public void clickLink() throws Exception {
-        assertEquals(base_url, driver.getCurrentUrl());
+        assertEquals(base_url, driver.getCurrentUrl()); //verify that that is origial page
         driver.findElement(By.id("link1")).click();
         assertEquals("Link Page 1", driver.findElement(By.tagName("h1")).getText());
         assertFalse(driver.getCurrentUrl().equals(base_url));

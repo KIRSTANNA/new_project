@@ -36,7 +36,11 @@ public class Sample4Task {
     @Test
     public void enterNumber() throws Exception {
 //        TODO
+        driver.findElement (By.id:"number")).clear());
 //        enter a number under "Number"
+        driver.findElement(By.id:"number"
+        driver.findElement(By.id:"result_button-number")).click())
+        assertTrue();e (driver.findElement(By.id:"result_number"()).
 //        click on "Result" button
 //        check that the correct Text appears ("You entered number: "NUMBER YOU ENTERED"")
 //        check that the button "Clear Result" is active now
