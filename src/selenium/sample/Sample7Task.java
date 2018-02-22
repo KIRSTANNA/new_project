@@ -104,9 +104,12 @@ public class Sample7Task {
         assertEquals("Option 2",
                 dropdown.getFirstSelectedOption().getText());
 
-
 //        click result
+        driver.findElement(By.id("result_button_select")).click();
+
 //        check that 'You selected option: Option 2' text is being displayed
+        assertEquals("You selected option: Option 2",
+                driver.findElement(By.id("result_select")).getText());
         System.out.println();
     }
 
