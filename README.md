@@ -80,4 +80,6 @@ cd ../../../
 ```
 
 ### Practical Task 1
-TBC
+Open file “src/selenium/tasks/Task1.java” and complete the TODO
+Test page in use: ”Tasks -> Form Task” (https://kristinek.github.io/test-sample/tasks/task1) 
+Push all your changes to git
