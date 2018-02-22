@@ -34,23 +34,48 @@ public class Sample5Task {
     }
 
     @Test
-    public void goToAlertedPageViaButton() throws Exception {
-//        TODO
-//        click on "To go to alerted page press Ok. Or stay here" button
-//        switch to alert
-//        click ok
-//        switch to second alert
-//        verify alert text
-//        click ok on second alert
-//        verify that the correct page is opened
+
+//
+
+        public void alertOnOpeningPage() throws Exception {
+            driver.get("https://kristinek.github.io/test-sample/examples/al_p");
+//        org.openqa.selenium.UnhandledAlertException: unexpected alert open:
+//        driver.findElement(By.id("heading")).getText();
+            Alert alert = driver.switchTo().alert();
+            assertEquals("Booooooooo!", alert.getText());
+
+            alert.accept();
+            assertEquals("This page is alerted", driver.findElement(By.id("heading")).getText());
+        }
+
+        @Test
+        public void alertOnclickingButton() throws Exception {
+            driver.findElement(By.className("w3-blue")).click();
+            Alert alert = driver.switchTo().alert();
+            assertEquals("Want to see an alerted page?!", alert.getText());
+            alert.dismiss();
+            assertEquals("So you desided to say? Good!",
+                    driver.findElement(By.id("textForAlerts\")).getText());
+
+
+        }
+    public void alertOnclickingButton() throws Exception {
+        driver.findElement(By.className("w3-blue")).click();
+        Alert alert = driver.switchTo().alert();
+        alert.accept();
+        Alert alert2 = driver.switchTo().alert();
+        assertEquals("Booooooooo!", alert2.getText());
+
+        alert2.accept();
+        assertTrue()
+        assertEquals("https://kristinek.github.io/test-sample/examples/al_p".equals(driver.getCurrentUrl()));
+        System.out.println(); }
+
+
     }
 
-    @Test
-    public void doNotGoToAlertedPageViaButton() throws Exception {
-//        TODO
-//        click on "To go to alerted page press Ok. Or stay here" button
-//        switch to alert
-//        click cancel
-//        verify the text on page
-    }
-}
+
+
+
+
+

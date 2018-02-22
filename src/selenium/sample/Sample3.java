@@ -35,6 +35,10 @@ public class Sample3 {
 
     @Test
     public void assertEqualsExampleString() throws Exception {
+       assertEquals(expected: "5", driver.findElements(By.className('test')).size());
+        assertEquals(expected:"This is also button",
+        driver.findElements(By.className("randomButton1")).
+
         String expected = "Base page";
         String actual = driver.findElement(By.id("heading")).getText();
         assertEquals(expected, actual);
@@ -61,6 +65,9 @@ public class Sample3 {
         assertTrue(elementTextOnPage.contains("ample"));
         assertTrue(elementTextOnPage.equalsIgnoreCase("unBELIEVable sAMPle Text"));
         // pass:
+
+        assertTrue(elementTextOnPage.equalsIgnoreCase("this is also BUTTON"));
+
         assertTrue(true);
         // fail:
 //        assertTrue(false);

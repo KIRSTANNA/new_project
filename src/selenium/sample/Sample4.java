@@ -41,6 +41,22 @@ public class Sample4 {
     }
 
     @Test
+
+    public void enterNumber () throws Exception {
+        String number =""
+
+        driver.findElement(By.id("number")) .clear();
+        driver.findElement(By.id("number")) .sendKeys (...charSequences:"7");
+        driver.findElement(By.id("result_button_n umber")) .click();
+        assertTrue(driver.findElement(By.id("result_number")) .isDisplayed());
+        System.out.println(driver.findElement(By.id("result_number")) .getText());
+        assertEquals( expected:"You entered number:\"7\"");
+
+        System.out.println("You entered number: \"" + number + "\"");
+        System.out.println(driver.findElement(By.id("result_number")) .getText());
+        assertEquals( expected:"You entered number:\"7\"");
+
+    }
     public void clickLink() throws Exception {
         assertEquals(base_url, driver.getCurrentUrl());
         driver.findElement(By.id("link1")).click();
@@ -105,7 +121,7 @@ public class Sample4 {
     public void enterTextInTextBox() throws Exception {
         WebElement textInput = driver.findElement(By.id("text"));
         String originalText = "This is a text box";
-        String sendKeyOne = " bla-bla";
+        String sendKeyOne = " bla-blaaaaaaa";
 
         assertEquals(textInput.getText(), ""); // checking that getText is empty
         assertEquals(textInput.getAttribute("value"), originalText); // checking that value is "This is a text box"

@@ -47,14 +47,32 @@ public class Sample5 {
 
     @Test
     public void alertOnclickingButton() throws Exception {
-        driver.findElement(By.className("w3-red")).click();
+        driver.findElement(By.className("w3-blue")).click();
         Alert alert = driver.switchTo().alert();
-        assertEquals("I am an alert box!", alert.getText());
+        assertEquals("Want to see an alerted page?!", alert.getText());
+        alert.dismiss();
+        assertEquals("So you desided to say? Good!",
+                driver.findElement(By.id("textForAlerts\")).getText());
 
-        alert.accept();
-        assertEquals("", driver.findElement(By.id("textForAlerts")).getText());
+
     }
+    public void alertOnclickingButton() throws Exception {
+        driver.findElement(By.className("w3-blue")).click();
+        Alert alert = driver.switchTo().alert();
+        alert.accept();
+        Alert alert2 = driver.switchTo().alert();
+        assertEquals("Booooooooo!", alert2.getText());
 
+        alert2.accept();
+        assertTrue()
+        assertEquals("https://kristinek.github.io/test-sample/examples/al_p".equals(driver.getCurrentUrl()));
+        System.out.println();
+
+
+
+
+
+    }
 
     @Test
     public void popUpConform() throws Exception {
