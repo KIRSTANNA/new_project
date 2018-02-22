@@ -65,6 +65,10 @@ public class Sample6Task {
 
     @Test
     public void findElementByCssName() throws Exception {
+//        "Heading 2 text":
+        System.out.println(driver.findElement(By.cssSelector("#heading_2")).getText());
+        System.out.println(driver.findElement(By.cssSelector("h2#heading_2")).getAttribute("id"));
+        System.out.println("--------------------");
 //        TODO
 //         1-2 ways to write css to
 //              * "Hading 2 text"
