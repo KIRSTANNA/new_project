@@ -16,7 +16,7 @@ public class Sample1Task {
 driver.get("https://kristinek.github.io/test-sample/index2.html");
         System.out.println(driver.getTitle());
         System.out.println(driver.getCurrentUrl());
-        Thread.sleep(1000);
+        Thread.sleep(10000);
         // TODO
         // go to https://kristinek.github.io/test-sample/index2.html
         // get title of page
