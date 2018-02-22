@@ -32,8 +32,14 @@ public class Sample6Task {
 
     @Test
     public void findElementByXPath() throws Exception {
+//        "Heading 2 text":
         System.out.println(driver.findElement(By.xpath("//*[@id=\"heading_2\"]")).getText());
         System.out.println(driver.findElement(By.xpath("//*[text()=\"Heading 2 text\"]")).getAttribute("id"));
+
+//        "Test Text 1"
+        System.out.println(driver.findElement(By.xpath("//*[@id='test1']/p[@class='test']")).getText());
+        System.out.println(driver.findElement(By.xpath("//*[@id='test1']/p[1]")).getText());
+
 //        TODO
 //         2-3 ways to write xpath to
 //              * "Heading 2 text"
