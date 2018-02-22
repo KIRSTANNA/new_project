@@ -64,12 +64,18 @@ public class Sample7Task {
     @Test
     public void selectRadioButton() throws Exception {
 //        check that none of the radio are selected
+        List <WebElement> radioButtons = driver.findElements(By.cssSelector("[type='radio']"));
+        for (WebElement radioButtons2 : radioButtons) {
+            assertFalse(radioButtons2.isSelected());
+        }
 //        select  "Option 3"
+        driver.findElement(By.cssSelector("[value='Option 3'][type='radio']")).click();
 //        check that "Option 1" and "Option 2' are not select, but "Option 3" is selected
 //        select  "Option 1"
 //        check that "Option 2" and "Option 3' are not select, but "Option 1" is selected
 //        click result
 //        check that 'You selected option: Option 1' text is being displayed
+        System.out.println();
     }
 
     @Test
