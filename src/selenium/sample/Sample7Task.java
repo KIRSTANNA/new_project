@@ -71,8 +71,15 @@ public class Sample7Task {
 //        select  "Option 3"
         driver.findElement(By.cssSelector("[value='Option 3'][type='radio']")).click();
 //        check that "Option 1" and "Option 2' are not select, but "Option 3" is selected
+        assertFalse(driver.findElement(By.cssSelector("[value='Option 1'][type='radio']")).isSelected());
+        assertFalse(driver.findElement(By.cssSelector("[value='Option 2'][type='radio']")).isSelected());
+        assertTrue(driver.findElement(By.cssSelector("[value='Option 3'][type='radio']")).isSelected());
 //        select  "Option 1"
+        driver.findElement(By.cssSelector("[value='Option 1'][type='radio']")).click();
 //        check that "Option 2" and "Option 3' are not select, but "Option 1" is selected
+        assertFalse(driver.findElement(By.cssSelector("[value='Option 2'][type='radio']")).isSelected());
+        assertFalse(driver.findElement(By.cssSelector("[value='Option 3'][type='radio']")).isSelected());
+        assertTrue(driver.findElement(By.cssSelector("[value='Option 1'][type='radio']")).isSelected());
 //        click result
 //        check that 'You selected option: Option 1' text is being displayed
         System.out.println();
