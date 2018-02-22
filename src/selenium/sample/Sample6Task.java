@@ -32,9 +32,11 @@ public class Sample6Task {
 
     @Test
     public void findElementByXPath() throws Exception {
+        System.out.println(driver.findElement(By.xpath("//*[@id=\"heading_2\"]")).getText());
+        System.out.println(driver.findElement(By.xpath("//*[text()=\"Heading 2 text\"]")).getAttribute("id"));
 //        TODO
 //         2-3 ways to write xpath to
-//              * "Hading 2 text"
+//              * "Heading 2 text"
 //              * "Test Text 1"
 //              * "Test Text 2"
 //              * "Test Text 3"
