@@ -12,6 +12,7 @@ import static org.junit.Assert.*;
 public class Sample3Task {
     WebDriver driver;
 
+
     // method which is being run before each test
     @Before
     public void startingTests() throws Exception {
@@ -33,6 +34,8 @@ public class Sample3Task {
 
     @Test
     public void assertEqualsTask() throws Exception {
+        driver.findElements(By.className("test."))size();
+        assertEquals("This is also a button",driver.findElement(By.id()));
 //         TODO:
 //         check how many element with class "test" there are on page (5)
 //         check that value of second button is "This is also a button"
@@ -40,6 +43,8 @@ public class Sample3Task {
 
     @Test
     public void assertTrueTask() throws Exception {
+        driver.findElement(By.id("buttonId")).getAttribute("value")
+                .equalsIgnoreCase("this is also button");
 //         TODO:
 //         check that it is True that value of second button is "this is Also a Button" if you ignore Caps Locks
     }
