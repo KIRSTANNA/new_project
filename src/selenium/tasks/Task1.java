@@ -3,8 +3,11 @@ package selenium.tasks;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import static  org.junit.Assert.*;
 
 public class Task1 {
     WebDriver driver;
@@ -24,18 +27,27 @@ public class Task1 {
 
     @Test
     public void errorOnText() {
+        driver.findElement(By.id("numb")).sendKeys("abirval");
+        driver.findElement(By.className("w3-btn")).click();
+        assertEquals("Please enter a number",driver.findElement(By.id("ch1_error")).getText());
 //        TODO
 //        enter a text instead of a number, check that correct error is seen
+
     }
 
     @Test
     public void errorOnNumberTooSmall() {
+        driver.findElement(By.id("numb")).sendKeys("30");
+        driver.findElement(By.className("w3-btn")).click();
+        assertEquals("Number is too small",driver.findElement(By.id("ch1_error")).getText());
 //        TODO
 //        enter number which is too small (below 50), check that correct error is seen
     }
 
     @Test
-    public void errorOnNumberTooBig() {
+    public void errorOnNumberTooBig() { driver.findElement(By.id("numb")).sendKeys("110");
+        driver.findElement(By.className("w3-btn")).click();
+        assertEquals("Number is too big",driver.findElement(By.id("ch1_error")).getText());
 //        TODO
 //        enter number which is too big (above 100), check that correct error is seen
     }
