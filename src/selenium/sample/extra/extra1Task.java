@@ -14,6 +14,8 @@ public class extra1Task {
     WebDriver driver;
     String base_url = "https://kristinek.github.io/test-sample/examples/act";
     String new_url = "https://kristinek.github.io/test-sample/examples/link1";
+    String po1_url = "https://kristinek.github.io/test-sample/examples/po1";
+    String po_url = "https://kristinek.github.io/test-sample/examples/po";
 
     // method which is being run before each test
     @Before
@@ -37,10 +39,15 @@ public class extra1Task {
     @Test
     public void navigateBack() throws Exception {
 //        TODO
+        driver.get("https://kristinek.github.io/test-sample/examples/po");
 //        open page with url "https://kristinek.github.io/test-sample/examples/po"
-//        click "More > " for the top left element
+        driver.findElement(By.cssSelector("a[po]")).click();
+        //        click "More > " for the top left element
+        assertEquals(driver.getCurrentUrl(),po1_url);
 //        check that the url now "https://kristinek.github.io/test-sample/examples/po1"
+        driver.navigate().back();
 //        using driver navigation go back to "https://kristinek.github.io/test-sample/examples/po"
+        assertEquals(driver.getCurrentUrl(), po_url);
 //        check that the page now is "https://kristinek.github.io/test-sample/examples/po"
     }
 

@@ -5,6 +5,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import static org.junit.Assert.*;
+
 
 public class Task2 {
     WebDriver driver;
@@ -23,12 +25,17 @@ public class Task2 {
     }
 
     @Test
-    public void loadGreen(){
+    public void loadGreen() throws InterruptedException {
 		/* TODO:
 		 * 1) click on start loading green button
 		 * 2) check that button does not appear, but loading text is seen instead
 		 * 3) check that both button and loading text is not seen, success is seen instead
 		 */
+        assertEquals("https://kristinek.github.io/test-sample/tasks/task2", driver.getCurrentUrl());
+        Thread.sleep(10000);
+
+
+
     }
 
     @Test
