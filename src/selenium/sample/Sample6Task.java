@@ -77,24 +77,18 @@ public class Sample6Task {
         System.out.println("--------------------");
 //        "Test Text 2"
         System.out.println(driver.findElement(By.cssSelector("#test1 > p:nth-of-type(2)")).getText());
-        System.out.println(driver.findElements(By.xpath("//*[@id='test1']/p")).get(1).getText());
+        System.out.println(driver.findElements(By.cssSelector("#test1 > p")).get(1).getText());
         System.out.println("--------------------");
 //        "Test Text 3"
-        System.out.println(driver.findElement(By.xpath("//*[@id='test3']/*[@class='test']")).getText());
-        System.out.println(driver.findElement(By.xpath("//*[@id='test3']/p")).getText());
-        System.out.println("--------------------");
-//        "Test Text 4"
-        System.out.println(driver.findElement(By.xpath("//p[contains(text(), \"4\")]")).getText());
-        System.out.println(driver.findElement(By.xpath("//*[@id='test3']/p[2]")).getText());
-        System.out.println("--------------------");
-//        "Test Text 5"
-        System.out.println(driver.findElement(By.xpath("//p[contains(text(), \"5\")]")).getText());
-        System.out.println(driver.findElement(By.xpath("//*[@class='Test']")).getText());
-        System.out.println("--------------------");
+        System.out.println(driver.findElement(By.cssSelector("#test3 > .test")).getText());
+        System.out.println(driver.findElement(By.cssSelector("#test3 .test")).getText());
+        System.out.println(driver.findElement(By.cssSelector("div:nth-of-type(5) .test")).getText());
+        System.out.println(driver.findElement(By.cssSelector("#test3 > p")).getText());
 
 //              * "This is also a button"
-        System.out.println(driver.findElement(By.xpath("//*[@id='buttonId']")).getAttribute("value"));
-        System.out.println(driver.findElement(By.xpath("//*[@name='randomButton2']")).getText());
+        System.out.println(driver.findElement(By.cssSelector("#buttonId")).getAttribute("value"));
+        System.out.println(driver.findElement(By.cssSelector("[name='randomButton2']")).getText());
+        System.out.println(driver.findElement(By.cssSelector("input[name='randomButton2']")).getText());
         System.out.println("--------------------");
 //        TODO
 //         1-2 ways to write css to
