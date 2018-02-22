@@ -68,6 +68,8 @@ public class Sample6Task {
 //        "Heading 2 text":
         System.out.println(driver.findElement(By.cssSelector("#heading_2")).getText());
         System.out.println(driver.findElement(By.cssSelector("h2#heading_2")).getAttribute("id"));
+        System.out.println(driver.findElement(By.cssSelector("h2:nth-of-type(2)")).getText());
+
         System.out.println("--------------------");
 //        TODO
 //         1-2 ways to write css to
