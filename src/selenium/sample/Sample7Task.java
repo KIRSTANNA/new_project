@@ -94,10 +94,17 @@ public class Sample7Task {
         dropdown.selectByVisibleText("Option 3");
 
 //        check that selected option is "Option 3"
-        assertEquals("Option 3", dropdown.getFirstSelectedOption().getText());
+        assertEquals("Option 3",
+                dropdown.getFirstSelectedOption().getText());
 
 //        select "Option 2" in Select
+        dropdown.selectByValue("value2");
+
 //        check that selected option is "Option 2"
+        assertEquals("Option 2",
+                dropdown.getFirstSelectedOption().getText());
+
+
 //        click result
 //        check that 'You selected option: Option 2' text is being displayed
         System.out.println();
