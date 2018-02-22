@@ -40,10 +40,12 @@ public class Sample6Task {
         System.out.println(driver.findElement(By.xpath("//*[@id='test1']/p[@class='test']")).getText());
         System.out.println(driver.findElement(By.xpath("//*[@id='test1']/p[1]")).getText());
 
+//        "Test Text 2"
+        System.out.println(driver.findElement(By.xpath("//*[@id='test1']/p[2]")).getText());
+        System.out.println(driver.findElements(By.xpath("//*[@id='test1']/p")).get(1).getText());
+        //*[@id='test1']/p[2]
 //        TODO
 //         2-3 ways to write xpath to
-//              * "Heading 2 text"
-//              * "Test Text 1"
 //              * "Test Text 2"
 //              * "Test Text 3"
 //              * "Test Text 4"
