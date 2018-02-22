@@ -40,14 +40,19 @@ public class Sample3Task {
 
     @Test
     public void assertTrueTask() throws Exception {
-//         TODO:
+        assertTrue(driver.findElement(By.id("buttonId")).getAttribute("value")
+                .equalsIgnoreCase("this is Also a Button"));
+
+        //         TODO:
 //         check that it is True that value of second button is "this is Also a Button" if you ignore Caps Locks
     }
 
     @Test
     public void assertFalseTask() throws Exception {
+
 //         TODO:
 //        check that it is False that value of second button is "This is a button"
+
     }
 
     @Test
