@@ -37,11 +37,11 @@ https://trello.com/invite/b/1P90Yjg9/5e24c5b205572d5c9b00ef18d284471f/bootcamp
 * Alerts:
     * [Sample5.java](../master/src/selenium/sample/Sample5.java)
     * [Sample5Task.java](../master/src/selenium/sample/Sample5Task.java)
-    
-### TBC Samples
 * Locators (xPath, CSS):
     * [Sample6.java](../master/src/selenium/sample/Sample6.java)
     * [Sample6Task.java](../master/src/selenium/sample/Sample6Task.java)
+    
+### TBC Samples
 * Actions (checkbox, radio button and option selector) + bonus of calendar:
     * [Sample7.java](../master/src/selenium/sample/Sample7.java)
     * [Sample7Task.java](../master/src/selenium/sample/Sample7Task.java)
@@ -83,3 +83,7 @@ cd ../../../
 Open file “src/selenium/tasks/Task1.java” and complete the TODO
 Test page in use: ”Tasks -> Form Task” (https://kristinek.github.io/test-sample/tasks/task1) 
 Push all your changes to git
+
+
+#### Test on locators
+https://goo.gl/forms/6AZsHBnvBPkfjuOp2
