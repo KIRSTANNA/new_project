@@ -34,6 +34,13 @@ public class Sample8Task {
 
     @Test
     public void styleChecks() throws Exception {
+        WebElement container1 = driver.findElement(By.className("w3-pale-red"));
+        assertEquals("rgba(255, 221, 221, 1)", container1.getCssValue("background-color"));
+        WebElement container2 = driver.findElement(By.className("w3-pale-yellow"));
+        assertEquals("rgba(255, 255, 204, 1)", container2.getCssValue("background-color"));
+        WebElement h1 = driver.findElement(By.className("w3-jumbo"));
+        assertEquals("64px", h1.getCssValue("font-size"));
+        assertEquals("\"Segoe UI\", Arial, sans-serif", h1.getCssValue("font-family"));
 //        check the background of top 2 sections
 //        check h1 element font-size, font-family
     }
