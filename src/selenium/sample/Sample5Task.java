@@ -35,6 +35,18 @@ public class Sample5Task {
 
     @Test
     public void goToAlertedPageViaButton() throws Exception {
+        driver.findElement(By.id("w3_blue")).click();
+        Alert alert = driver.switchTo().alert();
+        alert.accept();
+        Alert alert2 = driver.switchTo().alert();
+        assertEquals("Booooooooo!"); alert2.getText();
+        alert2.accept();
+        assertTrue("https://kristinek.github.io/test-sample/examples/al_p".equals());
+            driver.getCurrentUrl()));
+        System.out.println();
+
+
+
 //        TODO
 //        click on "To go to alerted page press Ok. Or stay here" button
 //        switch to alert

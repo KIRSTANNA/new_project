@@ -1,9 +1,6 @@
 package selenium.sample;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.ComparisonFailure;
-import org.junit.Test;
+import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -35,6 +32,7 @@ public class Sample3 {
 
     @Test
     public void assertEqualsExampleString() throws Exception {
+        assertEquals(expected)
         String expected = "Base page";
         String actual = driver.findElement(By.id("heading")).getText();
         assertEquals(expected, actual);
@@ -49,6 +47,8 @@ public class Sample3 {
 
     @Test
     public void assertEqualsExampleInt() throws Exception {
+        AssertEquals(expected "This is also a button ");
+        driver.findElement(By.id("button"));
         int expectedNumberOfElements = 5;
         int actualNumberOfElements = driver.findElements(By.className("text")).size();
         assertEquals(expectedNumberOfElements, actualNumberOfElements);
