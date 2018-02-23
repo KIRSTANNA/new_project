@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class Task2 {
@@ -33,7 +34,7 @@ public class Task2 {
 		 * 3) check that both button and loading text is not seen, success is seen instead
 		 */
 driver.findElement(By.id("start_green")).click();
-
+        
 //assertTrue();
     }
 

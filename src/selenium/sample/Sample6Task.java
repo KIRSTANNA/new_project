@@ -36,12 +36,23 @@ public class Sample6Task {
 //         2-3 ways to write xpath to
 //              * "Hading 2 text"
 //              * "Test Text 1"
+        System.out.println(driver.findElement(By.xpath("//*[@id='test1']/p[@class='test']")).getText());
+        System.out.println(driver.findElement(By.xpath("//*[@id='test1']/p[1]")).getText());
 //              * "Test Text 2"
 //              * "Test Text 3"
+        System.out.println(driver.findElement(By.xpath("//*[@id='test3']/*[@class='test']")).getText());
+        System.out.println(driver.findElement(By.xpath("")).getText());
+        System.out.println("--------------------");
 //              * "Test Text 4"
+        System.out.println(driver.findElement(By.xpath("//*[@id='test3']/*[@class='test']")).getText());
+        System.out.println(driver.findElement(By.xpath("")).getText());
+        System.out.println("--------------------");
 //              * "Test Text 5"
 //              * "Test Text 6"
 //              * "This is also a button"
+        System.out.println(driver.findElement(By.xpath("//*[@id='buttonId']")).getAttribute("value"));
+        System.out.println(driver.findElement(By.xpath("//*[@name='randomButton2']")).getText());
+        System.out.println("--------------------");
     }
 
     @Test
@@ -49,12 +60,21 @@ public class Sample6Task {
 //        TODO
 //         1-2 ways to write css to
 //              * "Hading 2 text"
+        System.out.println(driver.findElement(By.cssSelector("#heading_2")).getText());
+        System.out.println(driver.findElement(By.cssSelector("h2#heading_2")).getAttribute("id"));
+        System.out.println(driver.findElement(By.cssSelector("h2:nth-of-type(2)")).getText());
 //              * "Test Text 1"
+        System.out.println(driver.findElement(By.cssSelector("#test1 > p.test")).getText());
+        System.out.println(driver.findElement(By.cssSelector("#test1 > p:nth-of-type(1)")).getText());
+        System.out.println("--------------------");
 //              * "Test Text 2"
 //              * "Test Text 3"
 //              * "Test Text 4"
 //              * "Test Text 5"
 //              * "Test Text 6"
 //              * "This is also a button"
+        System.out.println(driver.findElement(By.xpath("//*[@id='buttonId']")).getAttribute("value"));
+        System.out.println(driver.findElement(By.xpath("//*[@name='randomButton2']")).getText());
+        System.out.println("--------------------");
     }
 }
