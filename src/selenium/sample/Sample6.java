@@ -39,6 +39,8 @@ public class Sample6 {
         System.out.println("\t text of element with id 'heading_1' is '" + driver.findElement(By.xpath("//*[@id='heading_1']")).getText() + "'");
         System.out.println("\t text of element with id 'standartText' is '" + driver.findElement(By.xpath("//*[@id='standartText']")).getText() + "'");
         System.out.println("\t text of element with id 'nonStandartText' is '" + driver.findElement(By.xpath("//*[@id='nonStandartText']")).getText() + "'");
+        System.out.println(driver.findElement(By.xpath("//*[@id=\"heading_2\"]")));
+        System.out.println(driver.findElement(By.xpath("//*[text()=\"Heading 2 text\"]")));
 
 //        find element by id using CSS
         System.out.println("Find element by id using CSS:");
