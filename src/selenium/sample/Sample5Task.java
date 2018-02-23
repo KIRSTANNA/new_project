@@ -43,8 +43,8 @@ public class Sample5Task {
 //        verify alert text
 //        click ok on second alert
 //        verify that the correct page is opened
-        driver.findElement (By.className())
-                Alert alert = driver
+//        driver.findElement (By.className())
+//                Alert alert = driver
     }
 
     @Test

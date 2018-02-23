@@ -1,6 +1,6 @@
 package selenium.sample;
 
-import com.sun.xml.internal.bind.v2.TODO;
+//import com.sun.xml.internal.bind.v2.TODO;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -35,9 +35,14 @@ public class Sample6Task {
 //        TODO
 //         2-3 ways to write xpath to
 //              * "Hading 2 text"
+        System.out.println("\t text of element with id 'heading_2' is '" + driver.findElement(By.xpath("//*[@id='heading_2']")).getText() + "'");
+
 //              * "Test Text 1"
+
 //              * "Test Text 2"
+
 //              * "Test Text 3"
+
 //              * "Test Text 4"
 //              * "Test Text 5"
 //              * "Test Text 6"

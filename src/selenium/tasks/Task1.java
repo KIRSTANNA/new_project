@@ -31,9 +31,6 @@ public class Task1 {
 
     @Test
     public void errorOnText() throws Exception {
-        //get title of page
-        //System.out.println(driver.getTitle());
-
 //     enter a text instead of a number, check that correct error is seen
         String invalidString = "invalid";
         driver.findElement(By.id("numb")).clear();

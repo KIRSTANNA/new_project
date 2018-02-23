@@ -50,7 +50,7 @@ public class Sample2Task {
     public void findElementByClassFirst() throws Exception {
         // TODO
         // get first text of class "test" (should be "Test Text 1")
-        System.out.println(driver.findElement(By.className("text").get(0).getText());
+//        System.out.println(driver.findElement(By.className("text").get(0).getText());
     }
 
     @Test
@@ -59,6 +59,6 @@ public class Sample2Task {
         // get size text of class "test" (should be 5)
         // get text of class "test"
         // get third text of class "test" (should be "Test Text 5")
-        System.out.println(driver.findElement(By.className("text").get(2).getTest())
+//        System.out.println(driver.findElement(By.className("text").get(2).getTest())
     }
 }
