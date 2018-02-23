@@ -75,8 +75,9 @@ public class Task1 {
 //        TODO
 //        enter a number between 50 and 100 digit in the input (square root of which doesn't have a remainder, e.g. 2 is square root of 4),
 //        then and press submit and check that correct no error is seen and check that square root is calculated correctly
-    }System.out.println();
-//
+    System.out.println("------------");
+    }
+    //
    /*     driver.findElement((By.id("numb")).sendKeys("81"));
         driver.findElement((By.className("w3-btn")). click();
     assertEquals("", driver.findElement(By.id("ch1_error")).getText();

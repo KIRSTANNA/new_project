@@ -16,7 +16,7 @@ public class Sample3Task {
     @Before
     public void startingTests() throws Exception {
         // from Sample 1:
-        int expectedNumberofElements=5
+//        int expectedNumberofElements=5
         String libWithDriversLocation =  System.getProperty("user.dir") + "\\lib\\";
         System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
         // declaration above:
