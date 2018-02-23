@@ -51,14 +51,18 @@ public class Sample6 {
     public void findElementByAllClasses() throws Exception {
 //        find element by all classes using xPath
         System.out.println("Find element by all classes using xPath:");
-        System.out.println("\t text of element with class 'text' is '" + driver.findElement(By.xpath("//*[@class='text']")).getText() + "'");
-        System.out.println("\t text of element with class 'text' and 'unbelievable' is '" + driver.findElement(By.xpath("//*[@class='text unbelievable']")).getText() + "'");
+        System.out.println("\t text of element with class 'text' is '" +
+                driver.findElement(By.xpath("//*[@class='text']")).getText() + "'");
+        System.out.println("\t text of element with class 'text' and 'unbelievable' is '" +
+                driver.findElement(By.xpath("//*contains[@class='text unbelievable']")).getText() + "'");
 
 //        find element by all classes using CSS
         System.out.println("Find element by all classes using CSS:");
         System.out.println("\t text of element with class 'text' is '" + driver.findElement(By.cssSelector(".text")).getText() + "'");
-        System.out.println("\t text of element with classes 'text' and 'unbelievable' is '" + driver.findElement(By.cssSelector(".text.unbelievable")).getText() + "'");
-        System.out.println("\t text of element with classes 'text' and 'unbelievable' is '" + driver.findElement(By.cssSelector(".unbelievable.text")).getText() + "'");
+        System.out.println("\t text of element with classes 'text' and 'unbelievable' is '" +
+                driver.findElement(By.cssSelector(".text.unbelievable")).getText() + "'");
+        System.out.println("\t text of element with classes 'text' and 'unbelievable' is '" +
+                driver.findElement(By.cssSelector(".unbelievable.text")).getText() + "'");
     }
 
     @Test
@@ -76,21 +80,27 @@ public class Sample6 {
     public void findElementByIdAndClass() throws Exception {
 //        find element by id and class using xPath
         System.out.println("Find element by id and classes using xPath:");
-        System.out.println("\t text of element with class 'text' and id 'dummy' is '" + driver.findElement(By.xpath("//*[contains(@class, 'text') and @id='dummy']")).getText() + "'");
-        System.out.println("\t text of element with class 'text' and id 'dummy' v2 is '" + driver.findElement(By.xpath("//*[@class='text' and @id='dummy']")).getText() + "'");
+        System.out.println("\t text of element with class 'text' and id 'dummy' is '" +
+                driver.findElement(By.xpath("//*[contains(@class, 'text') and @id='dummy']")).getText() + "'");
+        System.out.println("\t text of element with class 'text' and id 'dummy' v2 is '" +
+                driver.findElement(By.xpath("//*[@class='text' and @id='dummy']")).getText() + "'");
 
 //        find element by id and class using CSS
         System.out.println("Find element by id and classes using CSS:");
-        System.out.println("\t text of element with class 'text' and id 'dummy' is '" + driver.findElement(By.cssSelector(".text#dummy")).getText() + "'");
-        System.out.println("\t text of element with class 'text' and id 'dummy' v2 is '" + driver.findElement(By.cssSelector("#dummy.text")).getText() + "'");
+        System.out.println("\t text of element with class 'text' and id 'dummy' is '" +
+                driver.findElement(By.cssSelector(".text#dummy")).getText() + "'");
+        System.out.println("\t text of element with class 'text' and id 'dummy' v2 is '" +
+                driver.findElement(By.cssSelector("#dummy.text")).getText() + "'");
     }
 
     @Test
     public void findElementByText() throws Exception {
 //        find element by Text using xPath
         System.out.println("Find element by Text using xPath:");
-        System.out.println("\t class of element with text 'sample text 1' is '" + driver.findElement(By.xpath("//*[text()=\"sample text 1\"]")).getAttribute("class") + "'");
-        System.out.println("\t text of element which contains text 'dummy' is '" + driver.findElement(By.xpath("//*[contains(text(), 'dummy')]")).getText() + "'");
+        System.out.println("\t class of element with text 'sample text 1' is '" +
+                driver.findElement(By.xpath("//*[text()=\"sample text 1\"]")).getAttribute("class") + "'");
+        System.out.println("\t text of element which contains text 'dummy' is '" +
+                driver.findElement(By.xpath("//*[contains(text(), 'dummy')]")).getText() + "'");
 
     }
 
@@ -98,13 +108,17 @@ public class Sample6 {
     public void findElementByTagName() throws Exception {
 //        find element by tag name using xPath
         System.out.println("Find element by tag name using xPath:");
-        System.out.println("\t text of element with tag name 'h2' is '" + driver.findElement(By.xpath("//h2")).getText() + "'");
-        System.out.println("\t value of element with tag name 'input' is '" + driver.findElement(By.xpath("//input")).getAttribute("value") + "'");
+        System.out.println("\t text of element with tag name 'h2' is '" +
+                driver.findElement(By.xpath("//h2")).getText() + "'");
+        System.out.println("\t value of element with tag name 'input' is '" +
+                driver.findElement(By.xpath("//input")).getAttribute("value") + "'");
 
 //        find element by tag name using CSS
         System.out.println("Find element by tag name using CSS:");
-        System.out.println("\t text of element with tag name 'h2' is '" + driver.findElement(By.cssSelector("h2")).getText() + "'");
-        System.out.println("\t value of element with tag name 'input' is '" + driver.findElement(By.cssSelector("input")).getAttribute("value") + "'");
+        System.out.println("\t text of element with tag name 'h2' is '" +
+                driver.findElement(By.cssSelector("h2")).getText() + "'");
+        System.out.println("\t value of element with tag name 'input' is '" +
+                driver.findElement(By.cssSelector("input")).getAttribute("value") + "'");
     }
 
     @Test

@@ -35,20 +35,20 @@ public class Sample3 {
 
     @Test
     public void assertEqualsExampleString() throws Exception {
-       assertEquals(expected: "5", driver.findElements(By.className('test')).size());
-        assertEquals(expected:"This is also button",
-        driver.findElements(By.className("randomButton1")).
+//       assertEquals( "5", driver.findElements(By.className('test')).size());
+//        assertEquals("This is also button",
+//        driver.findElements(By.className("randomButton1")).
 
-        String expected = "Base page";
-        String actual = driver.findElement(By.id("heading")).getText();
-        assertEquals(expected, actual);
+//        String expected = "Base page";
+//        String actual = driver.findElement(By.id("heading")).getText();
+//        assertEquals( actual);
 
         // fails:
 //        org.junit.ComparisonFailure:
 //        Expected :Not base page
 //        Actual   :Base page
-        expected = "Not base page";
-        assertEquals(expected, actual);
+//        expected = "Not base page";
+//        assertEquals(expected, actual);
     }
 
     @Test

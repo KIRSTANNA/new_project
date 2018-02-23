@@ -48,17 +48,17 @@ public class Sample5Task {
             assertEquals("This page is alerted", driver.findElement(By.id("heading")).getText());
         }
 
-        @Test
-        public void alertOnclickingButton() throws Exception {
-            driver.findElement(By.className("w3-blue")).click();
-            Alert alert = driver.switchTo().alert();
-            assertEquals("Want to see an alerted page?!", alert.getText());
-            alert.dismiss();
-            assertEquals("So you desided to say? Good!",
-                    driver.findElement(By.id("textForAlerts\")).getText());
+//        @Test
+//        public void alertOnclickingButton() throws Exception {
+//            driver.findElement(By.className("w3-blue")).click();
+//            Alert alert = driver.switchTo().alert();
+//            assertEquals("Want to see an alerted page?!", alert.getText());
+//            alert.dismiss();
+//            assertEquals("So you desided to say? Good!",
+//                    driver.findElement(By.id("textForAlerts\")).getText());
 
 
-        }
+//        }
     public void alertOnclickingButton() throws Exception {
         driver.findElement(By.className("w3-blue")).click();
         Alert alert = driver.switchTo().alert();
@@ -67,8 +67,8 @@ public class Sample5Task {
         assertEquals("Booooooooo!", alert2.getText());
 
         alert2.accept();
-        assertTrue()
-        assertEquals("https://kristinek.github.io/test-sample/examples/al_p".equals(driver.getCurrentUrl()));
+//        assertTrue()
+//        assertEquals("https://kristinek.github.io/test-sample/examples/al_p".equals(driver.getCurrentUrl()));
         System.out.println(); }
 
 

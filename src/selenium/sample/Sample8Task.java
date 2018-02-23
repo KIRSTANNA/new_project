@@ -34,7 +34,18 @@ public class Sample8Task {
 
     @Test
     public void styleChecks() throws Exception {
-//        check the background of top 2 sections
+        WebElement conteinerOne = driver.findElement(By.className("w3-pale-red")) ;
+        System.out.println(conteinerOne .getCssValue("background-color");
+        assertEquals("rgba(255,221,221,1");,
+        conteinerOne.getCssValue("background-color"));
+
+        WebElement conteinerTwo = driver.findElement(By.className("w3-pale-yellow")) ;
+        System.out.println(conteinerOne .getCssValue("background-color");
+                assertEquals("rgba(255,255,204,1");,
+                conteinerTwo.getCssValue("background-color"));
+
+        )
+        //        check the background of top 2 sections
 //        check h1 element font-size, font-family
     }
 }

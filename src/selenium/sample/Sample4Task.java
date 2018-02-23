@@ -39,7 +39,7 @@ public class Sample4Task {
             String number ="7";
 
             driver.findElement(By.id("number")) .clear();
-            driver.findElement(By.id("number")) .sendKeys (...charSequences:"7");
+//            driver.findElement(By.id("number")) .sendKeys (...charSequences:"7");
         assertFalse(driver.findElement(By.id("clear_result_button_number")).isEnabled());
             driver.findElement(By.id("result_button_n umber")) .click();
             assertTrue(driver.findElement(By.id("result_number")) .isDisplayed());
