@@ -90,18 +90,28 @@ public class Sample7Task {
 
     @Test
     public void selectOption() throws Exception {
+
 //        select "Option 3" in Select
+        Select dropdown = new Select(driver.findElement(By.id("vfb-12")));
+        dropdown.selectByVisibleText("Option 3");
+
 //        check that selected option is "Option 3"
+        assertEquals("Option 3", dropdown.getFirstSelectedOption().getText());
 //        select "Option 2" in Select
+        dropdown.selectByValue("value2");
 //        check that selected option is "Option 2"
+        assertEquals("Option 3", dropdown.getFirstSelectedOption().getText());
 //        click result
+        driver.findElement(By.id("result_button_select")).click();
 //        check that 'You selected option: Option 2' text is being displayed
+        assertEquals("You selected option: Option 2", driver.findElement(By.id("result_select")));
     }
 
     @Test
     public void chooseDateViaCalendarBonus() throws Exception {
 //        enter date '4 of July 2007' using calendar widget
 //        check that correct date is added
+
     }
 
     @Test
