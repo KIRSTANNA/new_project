@@ -6,11 +6,16 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.*;
+
 public class Task1 {
     WebDriver driver;
 
     @Before
     public void openPage(){
+
         String libWithDriversLocation =  System.getProperty("user.dir") + "\\lib\\";
         System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
         driver = new ChromeDriver();
@@ -36,6 +41,8 @@ public class Task1 {
 
     @Test
     public void errorOnNumberTooBig() {
+
+//        BUG: if I enter number 666 no errors where seen
 //        TODO
 //        enter number which is too big (above 100), check that correct error is seen
     }
