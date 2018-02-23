@@ -34,14 +34,19 @@ public class Sample8Task {
 
     @Test
     public void styleChecks() throws Exception {
+//        check the background of top 2 sections
         WebElement containerOne = driver.findElement(By.className("w3-pale-red"));
         System.out.println(containerOne.getCssValue("background-color"));
         assertEquals("rgba(255, 221, 221, 1)",
                 containerOne.getCssValue("background-color"));
-//        check the background of top 2 sections
+
         WebElement containerTwo = driver.findElement(By.className("w3-pale-yellow"));
         System.out.println(containerTwo.getCssValue("background-color"));
-        
-//        check h1 element font-size, font-family
+        assertEquals("rgba(255, 255, 204, 1)",
+                containerTwo.getCssValue("background-color"));
+
+//        check h1 element font-size 64px
+        WebElement header = driver.findElement(By.className("w3-jumbo"));
+        assertEquals("64px", header.getCssValue("font-size"));
     }
 }

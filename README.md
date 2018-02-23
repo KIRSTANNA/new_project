@@ -87,3 +87,15 @@ Push all your changes to git
 
 #### Test on locators
 https://goo.gl/forms/6AZsHBnvBPkfjuOp2
+
+
+### Getting some files before part 2
+1. Open git bash in the project folder
+2. In git bash copy and paste:
+```
+git fetch
+git checkout origin/master -- src/selenium/tasks/Task3.java src/selenium/tasks/Task4Bonus.java
+git add .
+git commit -m "new files"
+git push
+```
