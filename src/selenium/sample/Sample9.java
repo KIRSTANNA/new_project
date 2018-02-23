@@ -47,13 +47,13 @@ public class Sample9 {
 
     @Test
     public void sleepExample() throws Exception {
-        Thread.sleep(10000);
+        Thread.sleep(5500);
         magicTextCheck();
     }
 
     @Test
     public void implicitWaitExample() throws Exception {
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//*[@id='magic_text']/*[text()=\"What is this magic? It's dev magic~\"]"));
         magicTextCheck();
     }
