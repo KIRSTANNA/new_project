@@ -12,6 +12,7 @@ import static org.junit.Assert.assertEquals;
 
 public class Sample8Task {
     WebDriver driver;
+    private WebElement containerOne;
 
     // method which is being run before each test
     @Before
@@ -36,5 +37,8 @@ public class Sample8Task {
     public void styleChecks() throws Exception {
 //        check the background of top 2 sections
 //        check h1 element font-size, font-family
+        WebElement container1 = driver. findElement(By.className("w3-pale-red"));
+        System.out.println( containerOne.getCssValue(s: "background-color" ));
+        assertEquals( expected );
     }
 }
