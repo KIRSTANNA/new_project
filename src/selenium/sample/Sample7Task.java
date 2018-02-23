@@ -40,11 +40,20 @@ public class Sample7Task {
 
     @Test
     public void selectCheckBox() throws Exception {
+        List<WebElement> checkList = driver.findElements(By);
+                for (WebElement checkBox : checkList) {
+                    assertFalse(checkBox.isSelected());
+                }
 //        check that none of the checkboxes are ticked
 //        tick  "Option 2"
 //        check that "Option 1" and "Option 3' are not ticked, but "Option 2" is ticked
+        assertTrue(driver.findElement(By.id("wfb-6-1")).isSelected());
+        assertFalse(driver.findElement(By.id("wfb-6-0")).isSelected());
+        assertFalse(driver.findElement(By.id("wfb-6-2")).isSelected());
 //        tick  "Option 3"
 //        click result
+        driver.findElement(By.id("result_checkbox")).click();
+
 //        check that text 'You selected value(s): Option 2, Option 3' is being displayed
     }
 
@@ -63,10 +72,14 @@ public class Sample7Task {
     @Test
     public void selectOption() throws Exception {
 //        select "Option 3" in Select
+        Select dropdown = new Select(driver.findElement(By.id("vfb-12")));
+
 //        check that selected option is "Option 3"
 //        select "Option 2" in Select
 //        check that selected option is "Option 2"
 //        click result
+        driver.findElement(By.id("result_button_select")).click();
+        assertEquals("You selected option: Option 2", driver.findElement(By.id("result_select")).getText());
 //        check that 'You selected option: Option 2' text is being displayed
     }
 

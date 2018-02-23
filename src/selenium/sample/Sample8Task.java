@@ -8,6 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.awt.*;
+
 import static org.junit.Assert.assertEquals;
 
 public class Sample8Task {
@@ -36,5 +38,15 @@ public class Sample8Task {
     public void styleChecks() throws Exception {
 //        check the background of top 2 sections
 //        check h1 element font-size, font-family
+        WebElement containerOne = driver.findElement(By.className("w3-pale-red"));
+        System.out.println(containerOne.getCssValue("background-color"));
+        assertEquals("rgba(255, 221, 221, 1)",containerOne.getCssValue("background-color") );
+
+        WebElement containerTwo = driver.findElement(By.className("w3-pale-yellow"));
+        System.out.println(containerTwo.getCssValue("background-color"));
+        assertEquals("rgba(255, 255, 204, 1)",containerTwo.getCssValue("background-color"));
+
+        WebElement header = driver.findElement(By.className("w3-jumbo"));
+        assertEquals("64px", header.getCssValue("font-size"));
     }
 }
