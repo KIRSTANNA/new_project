@@ -40,7 +40,7 @@ public class Sample4Task {
         driver.findElement(By.id("result_button_number")).click();
         assertTrue(driver.findElement(By.id("result_number")).isDisplayed());
         System.out.println(driver.findElement(By.id("result_number")).getText());
-        assertEquals("You enterd number:\"" + number + \"");
+//        assertEquals("You enterd number:\"" + number + \"");
 //        TODO
 //        enter a number under "Number"
 //        click on "Result" button

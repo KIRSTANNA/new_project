@@ -32,9 +32,10 @@ public class Task1 {
 
             String expected = "Please enter a number";
             driver.findElement(By.id("numb")).sendKeys("nnnn");
-            driver.findElement(By.className("w3-btn w3-orange w3-margin"))
-            String actual = driver.findElement(By.id("error")).getText();
-            assertEquals(expected, actual);
+            driver.findElement(By.className("w3-btn")).click();
+            String actualMessage = driver.findElement(By.id("ch1_error")).getText();
+            assertEquals(expected, actualMessage);
+
 
 //        TODO
 //        enter a text instead of a number, check that correct error is seen
@@ -45,7 +46,7 @@ public class Task1 {
 
         String expected = "Number is too small";
         driver.findElement(By.id("numb")).sendKeys("40");
-        driver.findElement(By.className("w3-btn")).click();
+        driver.findElement(By.className("w3-btn w3-orange w3-margin")).click();
         String actualMessage = driver.findElement(By.id("ch1_error")).getText();
 
         assertEquals(expected, actualMessage);
@@ -57,10 +58,12 @@ public class Task1 {
     @Test
     public void errorOnNumberTooBig() {
 
-        driver.findElement(By.id(""));
-        String expected = "ch1_error";
-        String actual = driver.findElement(By.id("ch1_error")).getText();
-        assertEquals(expected, actual);
+        String expected = "Number is too big";
+        driver.findElement(By.id("numb")).sendKeys("1000");
+        driver.findElement(By.className("w3-btn w3-orange w3-margin")).click();
+        String actualMessage = driver.findElement(By.id("ch1_error")).getText();
+        assertEquals(expected, actualMessage);
+
 //        TODO
 //        enter number which is too big (above 100), check that correct error is seen
     }

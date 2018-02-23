@@ -48,7 +48,7 @@ public class Sample2Task {
     }
     @Test
     public void findElementByClassFirst() throws Exception {
-        System.out.println(driver.findElement(By.className("test")).get(0));
+//        System.out.println(driver.findElement(By.className("test")).get(0));
         // TODO
         // get first text of class "test" (should be "Test Text 1")
     }

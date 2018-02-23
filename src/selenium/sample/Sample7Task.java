@@ -40,6 +40,7 @@ public class Sample7Task {
 
     @Test
     public void selectCheckBox() throws Exception {
+//        driver.findElements(By.cssSelector(""))
 //        check that none of the checkboxes are ticked
 //        tick  "Option 2"
 //        check that "Option 1" and "Option 3' are not ticked, but "Option 2" is ticked

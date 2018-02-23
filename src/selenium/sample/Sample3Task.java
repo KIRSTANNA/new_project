@@ -34,8 +34,8 @@ public class Sample3Task {
 
     @Test
     public void assertEqualsTask() throws Exception {
-        driver.findElements(By.className("test."))size();
-        assertEquals("This is also a button",driver.findElement(By.id()));
+        driver.findElements(By.className("test.")).size();
+//        assertEquals("This is also a button",driver.findElement(By.id()));
 //         TODO:
 //         check how many element with class "test" there are on page (5)
 //         check that value of second button is "This is also a button"
