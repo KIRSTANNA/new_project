@@ -42,6 +42,29 @@ public class Sample6Task {
 //              * "Test Text 5"
 //              * "Test Text 6"
 //              * "This is also a button"
+        System.out.println(driver.findElement(By.xpath("//*[@id='heading_2']")).getText());
+        System.out.println(driver.findElement(By.xpath("//*[text()='Heading2 text\']")).getAttribute("id"));
+
+        System.out.println(driver.findElement(By.xpath("//*[@id='test1']/p[@class='test']")).getText());
+        System.out.println(driver.findElement(By.xpath("//*[@id='test1']/p[1]")).getText());
+
+        System.out.println(driver.findElement(By.xpath("//*[@id='test1']/p[2]")).getText());
+        System.out.println(driver.findElements(By.xpath("//*[@id='test1']/p")).get(1).getText());
+
+        System.out.println(driver.findElement(By.xpath("//*[@id='test3']/*[@class='test']")).getText());
+        System.out.println(driver.findElement(By.xpath("")).getText());
+
+        System.out.println(driver.findElement(By.xpath("//p[contains(text(), \"4\")]")).getText());
+        System.out.println(driver.findElement(By.xpath("//*[@id='test3']/p[2]")).getText());
+
+        System.out.println(driver.findElement(By.xpath("//p[contains(text(), \"5\")]")).getText());
+        System.out.println(driver.findElement(By.xpath("//*[@class='Test']")).getText());
+
+        System.out.println(driver.findElement(By.xpath("//*[@id='buttonId']")).getAttribute("value"));
+        System.out.println(driver.findElement(By.xpath("//*[@name='randomButton2']")).getText());
+
+
+
     }
 
     @Test
@@ -56,5 +79,31 @@ public class Sample6Task {
 //              * "Test Text 5"
 //              * "Test Text 6"
 //              * "This is also a button"
+        System.out.println(driver.findElement(By.cssSelector("#heading_2")).getText());
+        System.out.println(driver.findElement(By.cssSelector("h2#heading_2")).getAttribute("id"));
+        System.out.println(driver.findElement(By.cssSelector("h2:nth-of-type(2)")).getText());
+
+        System.out.println(driver.findElement(By.cssSelector("#test1 > p.test")).getText());
+        System.out.println(driver.findElement(By.cssSelector("#test1 > p:nth-of-type(1)")).getText());
+
+
+        System.out.println(driver.findElement(By.cssSelector("#test1 > p:nth-of-type(2)")).getText());
+        System.out.println(driver.findElements(By.xpath("//*[@id='test1']/p")).get(1).getText());
+
+
+        System.out.println(driver.findElement(By.xpath("//*[@id='test3']/*[@class='test']")).getText());
+        System.out.println(driver.findElement(By.xpath("//*[@id='test3']/p")).getText());
+
+
+        System.out.println(driver.findElement(By.xpath("//p[contains(text(), \"4\")]")).getText());
+        System.out.println(driver.findElement(By.xpath("//*[@id='test3']/p[2]")).getText());
+
+
+        System.out.println(driver.findElement(By.xpath("//p[contains(text(), \"5\")]")).getText());
+        System.out.println(driver.findElement(By.xpath("//*[@class='Test']")).getText());
+
+
+        System.out.println(driver.findElement(By.xpath("//*[@id='buttonId']")).getAttribute("value"));
+        System.out.println(driver.findElement(By.xpath("//*[@name='randomButton2']")).getText());
     }
 }
